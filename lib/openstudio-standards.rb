@@ -146,6 +146,8 @@ module OpenstudioStandards
   require_relative "#{stds}/deer/deer_2070/comstock_deer_2070/comstock_deer_2070"
   require_relative "#{stds}/deer/deer_2075/deer_2075"
   require_relative "#{stds}/deer/deer_2075/comstock_deer_2075/comstock_deer_2075"
+  require_relative "#{stds}/deer/deer_t24_2022/deer_t24_2022"
+  
 
   require_relative "#{stds}/oeesc/oeesc"
   require_relative "#{stds}/oeesc/oeesc_2014/oeesc_2014"
@@ -319,6 +321,8 @@ module OpenstudioStandards
   require_relative "#{stds}/deer/deer.AirLoopHVAC"
   require_relative "#{stds}/deer/deer.Space"
   require_relative "#{stds}/deer/deer.PlanarSurface"
+  # DEER T24
+  require_relative "#{stds}/deer/deer_t24_2022/deer_t24_2022.Model"
   # CBES Common
   require_relative "#{stds}/cbes/cbes.AirLoopHVAC"
   require_relative "#{stds}/cbes/cbes.Model"
