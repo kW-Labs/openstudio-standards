@@ -45,6 +45,10 @@ Standard.class_eval do
     model_add_design_days_and_weather_file(model, climate_zone, epw_file)
     model_add_hvac(model, @instvarbuilding_type, climate_zone, @prototype_input)
     model_add_constructions(model, @instvarbuilding_type, climate_zone)
+    # create title 24 specific constructions for DEER prototypes
+    if template.include? "DEER T24"
+      model_set_subsurface_constructions(model, @instvarbuilding_type, climate_zone)
+    end
     model_fenestration_orientation(model, climate_zone)
     model_custom_hvac_tweaks(model, building_type, climate_zone, @prototype_input)
     model_add_transfer_air(model)
