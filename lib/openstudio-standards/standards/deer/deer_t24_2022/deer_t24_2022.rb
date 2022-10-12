@@ -2,7 +2,7 @@
 # to a given model.
 # @ref [Refrences::DEERT24]
 class DEERT242022 < DEER
-  register_stanadard 'DEER T24 2022'
+  register_standard 'DEER T24 2022'
   attr_reader :templates
 
   def initialize
