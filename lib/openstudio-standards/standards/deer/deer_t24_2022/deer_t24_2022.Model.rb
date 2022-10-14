@@ -103,4 +103,100 @@ class DEERT242022 < DEER
 
     return construction
   end
+
+  # this method returns required PV capacity per floor area from Title 24 2022 Table 140.10-A
+  # @return [Double] pv capacity per square foot
+  def model_get_pv_capacity_per_area(building_type, climate_zone)
+    # populate search hash
+    search_criteria = {
+      'building_type' => building_type,
+      'climate_zone_set' => climate_zone 
+    }
+
+    # search pv systems table for capacity per floor area
+    pv_data = model_find_object(standards_data['pv_system'], search_criteria)
+    capacity_per_area = pv_data["pv_capacity_per_square_foot"]
+
+    return capacity_per_area
+  end
+
+  # this method returns battery capacity data from Title 24 2022 Table 140.10-B
+  # @return [Hash] hash of battery capacity factor data
+  def model_get_battery_capacity(building_type)
+    # populate search hash
+    search_criteria = {
+      'building_type' => building_type,
+    }
+
+    # search battery storage table for energy capacity
+    battery_capacity = model_find_object(standards_data['battery_storage_system'], search_criteria)
+    return battery_capacity
+  end
+
+  # this method adds Photovoltaic system and battery storage systme required by Title 24 2022
+  def model_add_pv_storage_system(model, building_type, climate_zone)
+    # calculate required pv system capacity
+
+    # determine solar access roof area
+    solar_roof_area_si = find_solar_access_roof_area(model)
+    solar_roof_area_ip = OpenStudio.convert(solar_roof_area_si, "m^2", "ft^2").get
+
+    # get conditioned floor area
+    conditioned_area_si
+    model.getSpaces.each do |space|
+      cooled = space_cooled?(space)
+      heated = space_heated?(space)
+      if heated || cooled
+        conditioned_area_si += space.grossArea * space.multiplier
+      end
+    end
+
+    conditioned_area_ip = OpenStudio.convert(conditioned_area_si, "m^2", "ft^2").get
+
+    # get required system capacity per area
+    capacity_per_square_foot = model_get_pv_capacity_per_area(building_type, climate_zone)
+
+    # PV size in kW_dc shall be not less than the smaller of the PV system size determined by Equation 140.10-A, 
+    # or the total of all available Solar Access Roof Areas multiplied by 14 W/ft^2
+
+    kw_dc_floor_area = (conditioned_area_ip * capacity_per_square_foot) / 1000
+    kw_dc_roof_area = solar_roof_area_ip * 14.0
+    pv_size_kw = min(kw_dc_floor_area, kw_dc_roof_area)
+
+    # evaluate exceptions to 140.10(a)
+    if solar_roof_area_ip < (conditioned_area_ip * 0.03)
+      OpenStudio::logfree(OpenStudio::Info, 'openstudio.standards.Model', "Exception 1 to Section 140.10(a).  No PV system is required where the total of all available SARA is less than 
+      three percent of the conditioned floor area.")
+      return true
+    elsif pv_size_kw < 4.0
+      OpenStudio::logfree(OpenStudio::Info, 'openstudio.standards.Moodel', "Exception 2 to Section 140.10(a).  No PV system is required where the required PV system size is less than 4 
+      kWdc.")
+      return true
+    elsif solar_roof_area_ip < 80.0
+      OpenStudio::logfree(OpenStudio::Info, 'openstudio.standards.Moodel', "Exception 3 to Section 140.10(a). No PV system is required if the SARA contains less than 80 contiguous square 
+      feet.")
+      return true
+    else
+      OpenStudio::logfree(OpenStudio::Info, 'openstudio.standards.Moodel', "Creating a PV System with capacity of #{pv_size_kw.round(2)} kW DC.")
+    end
+    
+    # calculate battery energy capacity per Equation 140.10-B
+
+    battery_data = model_get_battery_capacity(building_type)
+    b_factor = battery_data["battery_storage_factor_b_energy_capacity"]
+    
+    # D factor is Rated single charge-discharge cycle AC to AC (round-trip) efficiency of the battery storage system
+    # default value is 0.95 * 0.95 from CBECC Rule Batt:RoundTripEff
+    d_factor = 0.95 * 0.95
+
+    battery_kwh = (pv_size_kw * b_factor) / (d_factor ** 0.5)
+
+    # calculate battery power caapacity per Equation 140.10-C
+    c_factor = battery_data["battery_storage_factor_c_power_capacity"]
+    
+    battery_kw = (pv_size_kw * c_factor)
+
+
+  end
+
 end
