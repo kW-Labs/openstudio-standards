@@ -148,6 +148,10 @@ def unique_properties(sheet_name)
            ['template', 'climate_zone', 'under_8000_hours', 'nontransient_dwelling', 'enthalpy_recovery_ratio_design_conditions']
          when 'space_types_lighting_control'
            ['template', 'building_type', 'space_type']
+         when 'pv_system'
+           ['template', 'building_type', 'climate_zone_set', 'pv_capacity_per_square_foot']
+         when 'battery_storage_system'
+           ['template', 'building_type', 'battery_storage_factor_b_energy_capacity', 'battery_storage_factor_c_power_capacity']
          else
            []
          end
