@@ -321,7 +321,7 @@ class DEERT242022 < DEER
       end
       # add generators
       generators.each do |generator|
-        electric_load_center_distribution.addGenerator(gpv)
+        electric_load_center_distribution.addGenerator(generator)
       end
     else
       # warn nothing will be created
@@ -333,9 +333,9 @@ class DEERT242022 < DEER
       electric_load_center_distribution.setElectricalBussType(electric_buss_type)
       case 
       when electric_buss_type.match(/Inverter/)
-        electric_load_center_distribution.setInverter(pv_inv)
+        electric_load_center_distribution.setInverter(inverter)
       when electric_buss_type.match(/Storage/)
-        electric_load_center_distribution.setElectricalStorage(elcs)
+        electric_load_center_distribution.setElectricalStorage(electrical_storage)
     else
       # warn
       electric_load_center_distribution.setElectricalBussType('DirectCurrentWithInverterDCStorage')
@@ -350,15 +350,15 @@ class DEERT242022 < DEER
         electric_load_center_distribution.setStorageControlUtilityDemandTargetFractionSchedule(model.alwaysOnDiscreteSchedule)
         electric_load_center_distribution.setStorageDischargePowerFractionSchedule(model.alwaysOnDiscreteSchedule)
         electric_load_center_distribution.setStorageChargePowerFractionSchedule(model.alwaysOnDiscreteSchedule)
-        electric_load_center_distribution.setStorageConverter(elcsc)
-        electric_load_center_distribution.setDesignStorageControlChargePower(power * 1000)
-        electric_load_center_distribution.setDesignStorageControlDischargePower(power * 1000)
+        electric_load_center_distribution.setStorageConverter(storage_converter)
+        electric_load_center_distribution.setDesignStorageControlChargePower(charge_power * 1000)
+        electric_load_center_distribution.setDesignStorageControlDischargePower(discharge_power * 1000)
       when "TrackChargeDischargeSchedules"
         electric_load_center_distribution.setStorageDischargePowerFractionSchedule(discharge_power_fraction_schedule)
         electric_load_center_distribution.setStorageChargePowerFractionSchedule(charge_power_fraction_schedule)
-        electric_load_center_distribution.setStorageConverter(elcsc)
-        electric_load_center_distribution.setDesignStorageControlChargePower(power * 1000)
-        electric_load_center_distribution.setDesignStorageControlDischargePower(power * 1000)
+        electric_load_center_distribution.setStorageConverter(storage_converter)
+        electric_load_center_distribution.setDesignStorageControlChargePower(charge_power * 1000)
+        electric_load_center_distribution.setDesignStorageControlDischargePower(discharge_power * 1000)
       when 'TrackMeterDemandStoreExcessOnSite'
         electric_load_center_distribution.setStorageControlTrackMeterName(storage_control_track_meter_name)
       end
