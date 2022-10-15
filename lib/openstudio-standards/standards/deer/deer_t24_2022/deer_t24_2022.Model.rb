@@ -133,8 +133,250 @@ class DEERT242022 < DEER
     return battery_capacity
   end
 
+  # returns the 'optimal' fixed PV array tilt based on latitude
+  # from: https://doi.org/10.1016/j.solener.2018.04.030, Figure 1.
+  #
+  # @param latitude [Double] building site latitude (degrees)
+  # @return [Array] array of [tilt, azimuth]
+  def model_pv_optimal_fixed_position(latitude)
+    # ensure float
+    latitude = latitude.to_f
+    if latitude > 0
+      # northern hemisphere
+      tilt = 1.3793 + latitude * (1.2011 + latitude * (-0.014404 + latitude * 0.000080509))
+      # from EnergyPlus I/O: An azimuth angle of 180◦ is for a south-facing array, and an azimuth angle of 0◦ is for anorth-facing array.
+      a = 180.0
+    else
+      # southern hemisphere - calculates negative tilt from negative latitude
+      tilt = -0.41657 + latitude * (1.4216 + latitude * (0.024051 + latitude * 0.00021828))
+      tilt = abs(tilt)
+      a = 0.0
+    end
+    # To allow for rain to naturally clean panels, optimal tilt angles between −10 and +10° latitude
+    # are usually limited to either −10° (for negative values) or +10° (for positive values)
+    if tilt.abs < 10.0
+      tilt = 10.0
+    end
+    return tilt, azimuth
+  end
+
+  # creates a Generator:PVWatts
+  # TODO modify for tracking systems
+  def model_add_pvwatts_system(model,
+                               name: 'PV System',
+                               module_type: 'Standard',
+                               array_type: 'Fixed Open Rack',
+                               system_losses: nil,
+                               azimuth_angle: nil,
+                               tilt_angle: nil)
+
+    pvw_generator = OpenStudio::Model::GeneratorPVWatts.new(model, pv_cap_w)
+    pvw_generator.setName(name )
+    pvw_generator.setModuleType(module_type)
+    pvw_generator.setArrayType(array_type)
+    pvw_generator.setSystemLosses(system_losses)
+
+    # check if site is poulated
+    latitude_defaulted = model.getSite.isLatitudeDefaulted
+    if !latitude_defaulted
+      latitude = model.getSite.latitude
+      # calcaulate optimal fixed tilt
+      tilt, azimuth = model_pv_optimal_fixed_position(latitude)
+    else
+      OpenStudio::logfree(OpenStudio::Info, 'openstudio.standards.Model', "No Site location found: Generator:PVWatts will be created with tilt of 25 degree tilt and 180 degree azimuth.")
+      tilt = 25.0
+      azimuth = 180.0
+    end
+
+    pvw_generator.setAzimuthAngle(azimuth_angle)
+    pvw_generator.setTiltAngle(tilt)
+
+    return pvw_generator
+  end
+
+  # creates an ElectricLoadCenter:Inverter:PVWatts
+  def model_add_pvwatts_inverter(model,
+                                 name: 'Default PV System Inverter',
+                                 dc_to_ac_size_ratio: 1.10,
+                                 inverter_efficiency: 0.96)
+    
+    pv_watt_inverter = OpenStudio::Model::ElectricLoadCenterInverterPVWatts.new(model)
+    pv_watt_inverter.setName(name)
+    pv_watt_inverter.setDCToACSizeRatio(dc_to_ac_size_ratio)
+    pv_watt_inverter.setInverterEfficiency(inverter_efficiency)
+
+    return pvwatt_inverter
+  end
+
+  # creates ElectricLoadCenter:Storage:Simple, modeling a simple battery
+  # 
+  # @param model [OpenStudio::Model::Model] OpenStudio model object
+  # @param name [String] the name of the coil, or nil in which case it will be defaulted
+  # @param schedule [String] name of the availability schedule, or [<OpenStudio::Model::Schedule>] Schedule object, or nil in which case default to always on
+  # @param rated_inlet_water_temperature [Double] rated inlet water temperature in degrees Celsius, default is hot water loop design exit temperature
+  # @return [OpenStudio::Model::ElectricLoadCenterStorageSimple] the battery
+  def model_add_electric_storage_simple(model,
+                                        name: 'Default Battery Storage',
+                                        schedule: nil,
+                                        discharge_eff: 0.9,
+                                        charge_eff: 0.9,
+                                        max_storage_capacity_kwh: nil,
+                                        max_charge_power_kw: nil,
+                                        max_discharge_power_kw: nil)
+    
+    battery = OpenStudio::Model::ElectricLoadCenterStorageSimple.new(model)
+    battery.setName(name)
+
+    # set battery availability schedule
+    if schedule.nil?
+      # default always on
+      battey_schedule = model.alwaysOnDiscreteSchedule
+    elsif schedule.class == String
+      if schedule == 'alwaysOffDiscreteSchedule'
+        battey_schedule = model.alwaysOffDiscreteSchedule
+      else
+        battey_schedule = model_add_schedule(model, schedule)
+        if battey_schedule.nil?
+          battey_schedule = model.alwaysOnDiscreteSchedule
+        end
+      end
+    elsif !schedule.to_Schedule.empty?
+      battey_schedule = schedule
+    else
+      battey_schedule = model.alwaysOnDiscreteSchedule
+    end
+
+    battery.setAvailabilitySchedule(battey_schedule)
+    battery.setNominalDischargingEnergeticEfficiency(discharge_eff) unless discharge_eff.nil?
+    battery.setNominalEnergeticEfficiencyforCharging(charge_eff) unless charge_eff.nil?
+    battery.setMaximumPowerforDischarging(max_discharge_power_kw * 1000) unless max_discharge_power_kw.nil?
+    battery.setMaximumPowerforCharging(max_charge_power_kw * 1000) unless max_charge_power_kw.nil?
+    battery.setMaximumStorageCapacity(OpenStudio.convert(max_storage_capacity_kwh, 'kWh', 'J').get) unless max_storage_capacity_kwh.nil?
+
+    return battery
+  end
+
+  # creates ElectricLoadCenter:Storage:Converter, modeling battery storage converter
+  # 
+  # 
+  def model_add_electric_storage_converter(model,
+                                           name: 'Storage Converter',
+                                           simple_fixed_eff: 1.0)
+
+    storage_converter = OpenStudio::Model::ElectricLoadCenterStorageConverter.new(model)
+    storage_converter.setName(name)
+    storage_converter.setSimpleFixedEfficiency(simple_fixed_eff)
+
+    return storage_converter
+  end
+
+  # creates ElectricLoadCenter:Distribution, modeling an electrical generator and storage system
+  # 
+  # @param generator_operation_scheme [String] Baseload, DemandLimit, TrackElectrical, TrackSchedule, TrackMeter, FollowThermal, FollowThermalLimitElectrical, default is Baseload
+  # @param electric_buss_type [String] AlternatingCurrent, AlternatingCurrentWithStorage, DirectCurrentWithInverter, DirectCurrentWithInverterDCStorage, DirectCurrentWithInverterACStorage, default is DirectCurrentWithInverterDCStorage
+  # @param storage_operation_scheme [String] TrackFacilityElectricDemandStoreExcessOnSite, TrackMeterDemandStoreExcessOnSite, TrackChargeDischargeSchedules, FacilityDemandLeveling, default is TrackFacilityElectricDemandStoreExcessOnSite
+  def model_add_electric_load_center_distribution(model,
+                                                  name: 'PV Battery Load Center',
+                                                  electrical_storage: nil,
+                                                  storage_converter: nil,
+                                                  inverter: nil,
+                                                  generators: nil,
+                                                  transformer: nil,
+                                                  generator_operation_scheme: 'Baseload',
+                                                  electric_buss_type: 'DirectCurrentWithInverterDCStorage',
+                                                  storage_operation_scheme: 'TrackFacilityElectricDemandStoreExcessOnSite',
+                                                  demand_limit_scheme_demand_limit: nil,
+                                                  track_schedule_scheme_schedule: nil,
+                                                  track_meter_scheme_meter_name: nil,
+                                                  storage_control_track_meter_name: nil,
+                                                  utility_demand_target: nil,
+                                                  demand_target_fraction_schedule: nil,
+                                                  charge_power_fraction_schedule: nil,
+                                                  discharge_power_fraction_schedule: nil,
+                                                  max_storage_state_charge_fraction: 1.0,
+                                                  charge_power: nil,
+                                                  discharge_power: nil)
+
+
+    electric_load_center_distribution = OpenStudio::Model::ElectricLoadCenterDistribution.new(model)
+    electric_load_center_distribution.setName(name)
+
+    # generators
+    if !generators.nil?
+      # generator operation scheme
+      if OpenStudio::Model::ElectricLoadCenterDistribution.generatorOperationSchemeTypeValues.include? generator_operation_scheme
+        electric_load_center_distribution.setGeneratorOperationSchemeType(generator_operation_scheme)
+        # TODO: check these inputs
+        case generator_operation_scheme
+        when 'DemandLimit'
+          electric_load_center_distribution.setDemandLimitSchemePurchasedElectricDemandLimit(demand_limit_scheme_demand_limit)
+        when 'TrackSchedule'
+          electric_load_center_distribution.setTrackScheduleSchemeSchedule(track_schedule_scheme_schedule)
+        when 'TrackMeter'
+          electric_load_center_distribution.setTrackMeterSchemeMeterName(track_meter_scheme_meter_name)
+        end
+      else 
+        # warn
+        electric_load_center_distribution.setGeneratorOperationSchemeType('Baseload')
+      end
+      # add generators
+      generators.each do |generator|
+        electric_load_center_distribution.addGenerator(gpv)
+      end
+    else
+      # warn nothing will be created
+      return false
+    end
+
+    # buss type
+    if OpenStudio::Model::ElectricLoadCenterDistribution.electricalBussTypeValues.include? electric_buss_type
+      electric_load_center_distribution.setElectricalBussType(electric_buss_type)
+      case 
+      when electric_buss_type.match(/Inverter/)
+        electric_load_center_distribution.setInverter(pv_inv)
+      when electric_buss_type.match(/Storage/)
+        electric_load_center_distribution.setElectricalStorage(elcs)
+    else
+      # warn
+      electric_load_center_distribution.setElectricalBussType('DirectCurrentWithInverterDCStorage')
+    end
+
+    # storage operation scheme
+    if OpenStudio::Model::ElectricLoadCenterDistribution.storageOperationSchemeValues.include? storage_operation_scheme 
+      electric_load_center_distribution.setStorageOperationScheme(storage_operation_scheme)
+      case storage_operation_scheme
+      when "FacilityDemandLeveling"
+        electric_load_center_distribution.setStorageControlUtilityDemandTarget(utility_demand_target * 1000) unless utility_demand_target.nil?
+        electric_load_center_distribution.setStorageControlUtilityDemandTargetFractionSchedule(model.alwaysOnDiscreteSchedule)
+        electric_load_center_distribution.setStorageDischargePowerFractionSchedule(model.alwaysOnDiscreteSchedule)
+        electric_load_center_distribution.setStorageChargePowerFractionSchedule(model.alwaysOnDiscreteSchedule)
+        electric_load_center_distribution.setStorageConverter(elcsc)
+        electric_load_center_distribution.setDesignStorageControlChargePower(power * 1000)
+        electric_load_center_distribution.setDesignStorageControlDischargePower(power * 1000)
+      when "TrackChargeDischargeSchedules"
+        electric_load_center_distribution.setStorageDischargePowerFractionSchedule(discharge_power_fraction_schedule)
+        electric_load_center_distribution.setStorageChargePowerFractionSchedule(charge_power_fraction_schedule)
+        electric_load_center_distribution.setStorageConverter(elcsc)
+        electric_load_center_distribution.setDesignStorageControlChargePower(power * 1000)
+        electric_load_center_distribution.setDesignStorageControlDischargePower(power * 1000)
+      when 'TrackMeterDemandStoreExcessOnSite'
+        electric_load_center_distribution.setStorageControlTrackMeterName(storage_control_track_meter_name)
+      end
+    else 
+      # warn
+      electric_load_center_distribution.setStorageOperationScheme("TrackFacilityElectricDemandStoreExcessOnSite")
+    end
+
+    electric_load_center_distribution.setMaximumStorageStateofChargeFraction(max_storage_state_charge_fraction)
+
+
+    return electric_load_center_distribution 
+  end
+
+
   # this method adds Photovoltaic system and battery storage systme required by Title 24 2022
-  def model_add_pv_storage_system(model, building_type, climate_zone)
+  # TODO: Support multiple building types
+  def model_create_t24_pv_storage_system(model, building_type, climate_zone)
     # calculate required pv system capacity
 
     # determine solar access roof area
@@ -179,7 +421,7 @@ class DEERT242022 < DEER
     else
       OpenStudio::logfree(OpenStudio::Info, 'openstudio.standards.Moodel', "Creating a PV System with capacity of #{pv_size_kw.round(2)} kW DC.")
     end
-    
+
     # calculate battery energy capacity per Equation 140.10-B
 
     battery_data = model_get_battery_capacity(building_type)
