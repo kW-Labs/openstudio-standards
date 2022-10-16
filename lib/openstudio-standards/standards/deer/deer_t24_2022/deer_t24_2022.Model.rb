@@ -271,10 +271,28 @@ class DEERT242022 < DEER
   end
 
   # creates ElectricLoadCenter:Distribution, modeling an electrical generator and storage system
-  # 
-  # @param generator_operation_scheme [String] Baseload, DemandLimit, TrackElectrical, TrackSchedule, TrackMeter, FollowThermal, FollowThermalLimitElectrical, default is Baseload
-  # @param electric_buss_type [String] AlternatingCurrent, AlternatingCurrentWithStorage, DirectCurrentWithInverter, DirectCurrentWithInverterDCStorage, DirectCurrentWithInverterACStorage, default is DirectCurrentWithInverterDCStorage
-  # @param storage_operation_scheme [String] TrackFacilityElectricDemandStoreExcessOnSite, TrackMeterDemandStoreExcessOnSite, TrackChargeDischargeSchedules, FacilityDemandLeveling, default is TrackFacilityElectricDemandStoreExcessOnSite
+  #
+  # @param name [String] object name
+  # @param electrical_storage [OpenStudio::Model::ElectricalStorage] storage object, required when Electrical Buss Type=AlternatingCurrentWithStorage, DirectCurrentWithInverterDCStorage, or DirectCurrentWithInverterACStorage
+  # @param storage_converter [OpenStudio::Model::ElectricLoadCenterStorageConverter] storage converter object, used to convert AC to DC when charging DC storage from grid supply. Expected when using Storage Operation Schemes FacilityDemandLeveling or TrackChargeDischargeSchedules.
+  # @param inverter [OpenStudio::Model::Interver] inverter object, required when Electrical Buss Type=DirectCurrentWithInverter, DirectCurrentWithInverterDCStorage, or DirectCurrentWithInverterACStorage
+  # @param generators [Array] Array of OpenStudio::Model::Generators. Required - If nil, no ElectricLoadCenter:Distribution will be created.
+  # @param transformer [OpenStudio::Model::ElectricLoadCenterTransformer] required when power needs to be output from on-site generation or storage to the grid via transformer.
+  # @param generator_operation_scheme [String] one of: Baseload, DemandLimit, TrackElectrical, TrackSchedule, TrackMeter, FollowThermal, FollowThermalLimitElectrical, default is Baseload
+  # @param electric_buss_type [String] one of: AlternatingCurrent, AlternatingCurrentWithStorage, DirectCurrentWithInverter, DirectCurrentWithInverterDCStorage, DirectCurrentWithInverterACStorage, default is DirectCurrentWithInverterDCStorage
+  # @param storage_operation_scheme [String] one of: TrackFacilityElectricDemandStoreExcessOnSite, TrackMeterDemandStoreExcessOnSite, TrackChargeDischargeSchedules, FacilityDemandLeveling, default is TrackFacilityElectricDemandStoreExcessOnSite
+  # @param demand_limit_scheme_demand_limit [Double]
+  # @param track_schedule_scheme_schedule [String] name of schedule or [OpenStudio::Model::Schedule] Schedule object, or nil. Required when Generator Operation Scheme=TrackSchedule
+  # @param track_meter_scheme_meter_name [String] name of meter, or nil. Required when Generator Operation Scheme=TrackMeter
+  # @param storage_control_track_meter_name [String] name of meter, or nil. Required when Storage Operation Scheme is set to TrackMeterDemandStoreExcessOnSite.
+  # @param utility_demand_target [Double] Target utility service demand power for discharge control. Required when Storage Operation Scheme= FacilityDemandLeveling.
+  # @param demand_target_fraction_schedule
+  # @param charge_power_fraction_schedule
+  # @param discharge_power_fraction_schedule
+  # @param max_storage_state_charge_fraction
+  # @param charge_power [Double] Maximum rate that electric power can be charged into storage. Required when Storage Operation Scheme= FacilityDemandLeveling or TrackChargeDischargeSchedules.
+  # @param discharge_power [Double] Maximum rate that electric power can be discharged from storage. Required when Storage Operation Scheme= FacilityDemandLeveling or TrackChargeDischargeSchedules.
+  # TODO: complete logic (including checks and warning/error messages, especially for schedules) for all input combinations to fully support this object. 
   def model_add_electric_load_center_distribution(model,
                                                   name: 'PV Battery Load Center',
                                                   electrical_storage: nil,
@@ -369,6 +387,8 @@ class DEERT242022 < DEER
 
     electric_load_center_distribution.setMaximumStorageStateofChargeFraction(max_storage_state_charge_fraction)
 
+    # set transformer if it exists
+    electric_load_center_distribution.setTransformer(transformer) unless transformer.nil?
 
     return electric_load_center_distribution 
   end
