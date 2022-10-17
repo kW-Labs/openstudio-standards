@@ -323,7 +323,7 @@ module OpenstudioStandards
   require_relative "#{stds}/deer/deer.PlanarSurface"
   # DEER T24
   require_relative "#{stds}/deer/deer_t24_2022/deer_t24_2022.Model"
-  require_relative "#{stds}/deer/deer_t24_2022/deer_t24_2022.Surfaces"
+  require_relative "#{stds}/deer/deer_t24_2022/deer_t24_2022.Surface"
   # CBES Common
   require_relative "#{stds}/cbes/cbes.AirLoopHVAC"
   require_relative "#{stds}/cbes/cbes.Model"
