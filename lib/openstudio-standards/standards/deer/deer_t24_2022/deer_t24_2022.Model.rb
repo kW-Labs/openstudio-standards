@@ -115,7 +115,16 @@ class DEERT242022 < DEER
 
     # search pv systems table for capacity per floor area
     pv_data = model_find_object(standards_data['pv_system'], search_criteria)
+
+    if !pv_data
+      # data not found - building type not required
+      OpenStudio::logFree(OpenStudio::Info, 'openstudio.standards.Moodel', "No required PV capacity found for #{building_type}. None will be created.")
+      return false
+    end
+
     capacity_per_area = pv_data["pv_capacity_per_square_foot"]
+
+    OpenStudio::logFree(OpenStudio::Info, 'openstudio.standards.Moodel', "Found capacity by area for #{building_type} and #{climate_zone} of #{capacity_per_area}.")
 
     return capacity_per_area
   end
@@ -428,11 +437,17 @@ class DEERT242022 < DEER
         conditioned_area_si += space.floorArea * space.multiplier
       end
     end
-
+    
     conditioned_area_ip = OpenStudio.convert(conditioned_area_si, "m^2", "ft^2").get
+
+    OpenStudio::logFree(OpenStudio::Info, 'openstudio.standards.Moodel', "Building Conditioned Floor Area: #{conditioned_area_ip.round(2)}.")
 
     # get required system capacity per area
     capacity_per_square_foot = model_get_pv_capacity_per_area(building_type, climate_zone)
+
+    if !capacity_per_square_foot
+      return true
+    end
 
     # PV size in kW_dc shall be not less than the smaller of the PV system size determined by Equation 140.10-A, 
     # or the total of all available Solar Access Roof Areas multiplied by 14 W/ft^2
@@ -466,7 +481,9 @@ class DEERT242022 < DEER
     
     # D factor is Rated single charge-discharge cycle AC to AC (round-trip) efficiency of the battery storage system
     # default value is 0.95 * 0.95 from CBECC Rule Batt:RoundTripEff
-    d_factor = 0.95 * 0.95
+    # d_factor = 0.95 * 0.95
+    # set by minimum prescriptive requirement of JA12.2.2.1(b)
+    d_factor = 0.80
 
     battery_kwh = (pv_size_kw * b_factor) / (d_factor ** 0.5)
 
