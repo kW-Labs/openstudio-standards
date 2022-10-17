@@ -431,6 +431,9 @@ class DEERT242022 < DEER
     # get conditioned floor area
     conditioned_area_si = 0
     model.getSpaces.each do |space|
+      # exclude plenums
+      next if space_plenum?(space)
+      puts space.name.get
       cooled = space_cooled?(space)
       heated = space_heated?(space)
       if heated || cooled
