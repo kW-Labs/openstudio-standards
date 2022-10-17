@@ -145,19 +145,19 @@ class DEERT242022 < DEER
       # northern hemisphere
       tilt = 1.3793 + latitude * (1.2011 + latitude * (-0.014404 + latitude * 0.000080509))
       # from EnergyPlus I/O: An azimuth angle of 180◦ is for a south-facing array, and an azimuth angle of 0◦ is for anorth-facing array.
-      a = 180.0
+      azimuth = 180.0
     else
       # southern hemisphere - calculates negative tilt from negative latitude
       tilt = -0.41657 + latitude * (1.4216 + latitude * (0.024051 + latitude * 0.00021828))
       tilt = abs(tilt)
-      a = 0.0
+      azimuth = 0.0
     end
     # To allow for rain to naturally clean panels, optimal tilt angles between −10 and +10° latitude
     # are usually limited to either −10° (for negative values) or +10° (for positive values)
     if tilt.abs < 10.0
       tilt = 10.0
     end
-    return tilt, azimuth
+    return [tilt, azimuth]
   end
 
   # creates a Generator:PVWatts
@@ -165,30 +165,45 @@ class DEERT242022 < DEER
   def model_add_pvwatts_system(model,
                                name: 'PV System',
                                module_type: 'Standard',
-                               array_type: 'Fixed Open Rack',
-                               system_losses: nil,
+                               array_type: 'FixedOpenRack',
+                               system_capacity_kw: nil,
+                               system_losses: 0.14,
                                azimuth_angle: nil,
                                tilt_angle: nil)
 
-    pvw_generator = OpenStudio::Model::GeneratorPVWatts.new(model, pv_cap_w)
+    system_capacity_w = system_capacity_kw * 1000
+    pvw_generator = OpenStudio::Model::GeneratorPVWatts.new(model, system_capacity_w)
     pvw_generator.setName(name )
-    pvw_generator.setModuleType(module_type)
-    pvw_generator.setArrayType(array_type)
-    pvw_generator.setSystemLosses(system_losses)
-
-    # check if site is poulated
-    latitude_defaulted = model.getSite.isLatitudeDefaulted
-    if !latitude_defaulted
-      latitude = model.getSite.latitude
-      # calcaulate optimal fixed tilt
-      tilt, azimuth = model_pv_optimal_fixed_position(latitude)
+    if ["Standard","Premium","ThinFilm"].include? module_type
+      pvw_generator.setModuleType(module_type)
     else
-      OpenStudio::logfree(OpenStudio::Info, 'openstudio.standards.Model', "No Site location found: Generator:PVWatts will be created with tilt of 25 degree tilt and 180 degree azimuth.")
-      tilt = 25.0
-      azimuth = 180.0
+      OpenStudio::logFree(OpenStudio::Warn, 'openstudio.standards.Model', "Wrong module type entered for OpenStudio::Generator::PVWatts. Review Input.")
+      return false
     end
 
-    pvw_generator.setAzimuthAngle(azimuth_angle)
+    if ["FixedOpenRack","FixedRoofMounted","OneAxis","OneAxisBacktracking","TwoAxis"].include? array_type
+      pvw_generator.setArrayType(array_type)
+    else 
+      OpenStudio::logFree(OpenStudio::Warn, 'openstudio.standards.Model', "Wrong array type entered for OpenStudio::Generator::PVWatts. Review Input.")
+      return false
+    end
+    pvw_generator.setSystemLosses(system_losses)
+
+    if tilt_angle.nil? && azimuth_angle.nil?
+      # check if site is poulated
+      latitude_defaulted = model.getSite.isLatitudeDefaulted
+      if !latitude_defaulted
+        latitude = model.getSite.latitude
+        # calcaulate optimal fixed tilt
+        tilt, azimuth = model_pv_optimal_fixed_position(latitude)
+      else
+        OpenStudio::logFree(OpenStudio::Debug, 'openstudio.standards.Model', "No Site location found: Generator:PVWatts will be created with tilt of 25 degree tilt and 180 degree azimuth.")
+        tilt = 25.0
+        azimuth = 180.0
+      end
+    end
+
+    pvw_generator.setAzimuthAngle(azimuth)
     pvw_generator.setTiltAngle(tilt)
 
     return pvw_generator
@@ -200,12 +215,12 @@ class DEERT242022 < DEER
                                  dc_to_ac_size_ratio: 1.10,
                                  inverter_efficiency: 0.96)
     
-    pv_watt_inverter = OpenStudio::Model::ElectricLoadCenterInverterPVWatts.new(model)
-    pv_watt_inverter.setName(name)
-    pv_watt_inverter.setDCToACSizeRatio(dc_to_ac_size_ratio)
-    pv_watt_inverter.setInverterEfficiency(inverter_efficiency)
+    pvw_inverter = OpenStudio::Model::ElectricLoadCenterInverterPVWatts.new(model)
+    pvw_inverter.setName(name)
+    pvw_inverter.setDCToACSizeRatio(dc_to_ac_size_ratio)
+    pvw_inverter.setInverterEfficiency(inverter_efficiency)
 
-    return pvwatt_inverter
+    return pvw_inverter
   end
 
   # creates ElectricLoadCenter:Storage:Simple, modeling a simple battery
@@ -349,11 +364,12 @@ class DEERT242022 < DEER
     # buss type
     if OpenStudio::Model::ElectricLoadCenterDistribution.electricalBussTypeValues.include? electric_buss_type
       electric_load_center_distribution.setElectricalBussType(electric_buss_type)
-      case 
-      when electric_buss_type.match(/Inverter/)
+      if electric_buss_type.match(/Inverter/)
         electric_load_center_distribution.setInverter(inverter)
-      when electric_buss_type.match(/Storage/)
+      end
+      if electric_buss_type.match(/Storage/)
         electric_load_center_distribution.setElectricalStorage(electrical_storage)
+      end
     else
       # warn
       electric_load_center_distribution.setElectricalBussType('DirectCurrentWithInverterDCStorage')
@@ -404,12 +420,12 @@ class DEERT242022 < DEER
     solar_roof_area_ip = OpenStudio.convert(solar_roof_area_si, "m^2", "ft^2").get
 
     # get conditioned floor area
-    conditioned_area_si
+    conditioned_area_si = 0
     model.getSpaces.each do |space|
       cooled = space_cooled?(space)
       heated = space_heated?(space)
       if heated || cooled
-        conditioned_area_si += space.grossArea * space.multiplier
+        conditioned_area_si += space.floorArea * space.multiplier
       end
     end
 
@@ -423,23 +439,23 @@ class DEERT242022 < DEER
 
     kw_dc_floor_area = (conditioned_area_ip * capacity_per_square_foot) / 1000
     kw_dc_roof_area = solar_roof_area_ip * 14.0
-    pv_size_kw = min(kw_dc_floor_area, kw_dc_roof_area)
+    pv_size_kw = [kw_dc_floor_area, kw_dc_roof_area].min
 
     # evaluate exceptions to 140.10(a)
     if solar_roof_area_ip < (conditioned_area_ip * 0.03)
-      OpenStudio::logfree(OpenStudio::Info, 'openstudio.standards.Model', "Exception 1 to Section 140.10(a).  No PV system is required where the total of all available SARA is less than 
+      OpenStudio::logFree(OpenStudio::Info, 'openstudio.standards.Model', "Exception 1 to Section 140.10(a).  No PV system is required where the total of all available SARA is less than 
       three percent of the conditioned floor area.")
       return true
     elsif pv_size_kw < 4.0
-      OpenStudio::logfree(OpenStudio::Info, 'openstudio.standards.Moodel', "Exception 2 to Section 140.10(a).  No PV system is required where the required PV system size is less than 4 
+      OpenStudio::logFree(OpenStudio::Info, 'openstudio.standards.Moodel', "Exception 2 to Section 140.10(a).  No PV system is required where the required PV system size is less than 4 
       kWdc.")
       return true
     elsif solar_roof_area_ip < 80.0
-      OpenStudio::logfree(OpenStudio::Info, 'openstudio.standards.Moodel', "Exception 3 to Section 140.10(a). No PV system is required if the SARA contains less than 80 contiguous square 
+      OpenStudio::logFree(OpenStudio::Info, 'openstudio.standards.Moodel', "Exception 3 to Section 140.10(a). No PV system is required if the SARA contains less than 80 contiguous square 
       feet.")
       return true
     else
-      OpenStudio::logfree(OpenStudio::Info, 'openstudio.standards.Moodel', "Creating a PV System with capacity of #{pv_size_kw.round(2)} kW DC.")
+      OpenStudio::logFree(OpenStudio::Info, 'openstudio.standards.Moodel', "Creating a PV System with capacity of #{pv_size_kw.round(2)} kW DC.")
     end
 
     # calculate battery energy capacity per Equation 140.10-B
@@ -457,6 +473,29 @@ class DEERT242022 < DEER
     c_factor = battery_data["battery_storage_factor_c_power_capacity"]
     
     battery_kw = (pv_size_kw * c_factor)
+
+    OpenStudio::logFree(OpenStudio::Info, 'openstudio.standards.Moodel', "Creating a Battery Storage system with capacity of #{battery_kwh.round(2)} kWh and charge/discharge power of #{battery_kw.round(2)} kW.")
+
+    # create system components
+    pv_array = model_add_pvwatts_system(model, system_capacity_kw: pv_size_kw)
+    pv_inverter = model_add_pvwatts_inverter(model)
+    battery = model_add_electric_storage_simple(model, max_storage_capacity_kwh: battery_kwh, max_charge_power_kw: battery_kw, max_discharge_power_kw: battery_kw)
+    converter = model_add_electric_storage_converter(model)
+
+    load_center_distribution = model_add_electric_load_center_distribution(model,
+                                                                           electrical_storage: battery,
+                                                                           storage_converter: converter,
+                                                                           inverter: pv_inverter,
+                                                                           generators: [pv_array],
+                                                                           charge_power: battery_kw,
+                                                                           discharge_power: battery_kw)
+    
+    # puts pv_array.to_s
+    # puts pv_inverter.to_s
+    # puts battery.to_s
+    # puts converter.to_s
+    # puts load_center_distribution.to_s
+    return true
 
 
   end
