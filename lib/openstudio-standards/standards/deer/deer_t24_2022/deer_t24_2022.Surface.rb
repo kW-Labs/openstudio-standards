@@ -25,7 +25,7 @@ class DEERT242022 < DEER
       next unless surface.surfaceType == 'RoofCeiling'
       next unless surface.outsideBoundaryCondition == 'Outdoors'
 
-      total_sara += surface.grossArea * surface.space.multiplier
+      total_sara += surface.grossArea * surface.space.get.multiplier
     end
 
     return total_sara
