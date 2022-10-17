@@ -454,7 +454,7 @@ class DEERT242022 < DEER
 
     # Equation 140.10-A
     kw_dc_floor_area = (conditioned_area_ip * capacity_per_square_foot) / 1000
-    kw_dc_roof_area = solar_roof_area_ip * 14.0
+    kw_dc_roof_area = (solar_roof_area_ip * 14.0) / 1000
     pv_size_kw = [kw_dc_floor_area, kw_dc_roof_area].min
 
     # evaluate exceptions to 140.10(a)
