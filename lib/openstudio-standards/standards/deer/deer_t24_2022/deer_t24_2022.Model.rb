@@ -437,6 +437,7 @@ class DEERT242022 < DEER
     # PV size in kW_dc shall be not less than the smaller of the PV system size determined by Equation 140.10-A, 
     # or the total of all available Solar Access Roof Areas multiplied by 14 W/ft^2
 
+    # Equation 140.10-A
     kw_dc_floor_area = (conditioned_area_ip * capacity_per_square_foot) / 1000
     kw_dc_roof_area = solar_roof_area_ip * 14.0
     pv_size_kw = [kw_dc_floor_area, kw_dc_roof_area].min
@@ -476,11 +477,38 @@ class DEERT242022 < DEER
 
     OpenStudio::logFree(OpenStudio::Info, 'openstudio.standards.Moodel', "Creating a Battery Storage system with capacity of #{battery_kwh.round(2)} kWh and charge/discharge power of #{battery_kw.round(2)} kW.")
 
+    # evaluate exceptions to 140.10(b)
+    if pv_size_kw < kw_dc_floor_area * 0.15
+      OpenStudio::logFree(OpenStudio::Info, 'openstudio.standards.Model', "Exception 1 to Section 140.10(b).   No battery storage system is required if the installed PV system size is less 
+      than 15 percent of the size determined by Equation 140.10-A.")
+    elsif battery_kwh < 10.0
+      OpenStudio::logFree(OpenStudio::Info, 'openstudio.standards.Model', "Exception 2 to Section 140.10(b).   No battery storage system is required in buildings with battery storage 
+      system requirements with less than 10 kWh rated capacity.")
+    elsif conditioned_area_ip < 5000.0
+      # TODO: only applies to spaces >5000 for multitenant spaces
+      OpenStudio::logFree(OpenStudio::Info, 'openstudio.standards.Model', "Exception 3 to Section 140.10(b).   For single-tenant buildings with less than 5,000 square feet of conditioned floor area, no battery 
+      storage system is required.")
+    elsif climate_zone == "CEC T24-CEC1" && ["OfL", "OfS", "Ese", "EUn", "WRf"].include?(building_type)
+      OpenStudio::logFree(OpenStudio::Info, 'openstudio.standards.Model', "Exception 4 to Section 140.10(b).   In Climate Zone 1, no battery storage system is required for offices, schools 
+      and warehouses.")
+    else
+      battery = model_add_electric_storage_simple(model, max_storage_capacity_kwh: battery_kwh, max_charge_power_kw: battery_kw, max_discharge_power_kw: battery_kw)
+      converter = model_add_electric_storage_converter(model)
+    end
+
+    if battery.nil? 
+      # PV required, no Storage required
+      buss_type = "DirectCurrentWithInverter"
+    else
+      # PV and Storage required
+      buss_type = "DirectCurrentWithInverterDCStorage"
+    end
+
+
     # create system components
     pv_array = model_add_pvwatts_system(model, system_capacity_kw: pv_size_kw)
     pv_inverter = model_add_pvwatts_inverter(model)
-    battery = model_add_electric_storage_simple(model, max_storage_capacity_kwh: battery_kwh, max_charge_power_kw: battery_kw, max_discharge_power_kw: battery_kw)
-    converter = model_add_electric_storage_converter(model)
+
 
     load_center_distribution = model_add_electric_load_center_distribution(model,
                                                                            electrical_storage: battery,
@@ -488,7 +516,8 @@ class DEERT242022 < DEER
                                                                            inverter: pv_inverter,
                                                                            generators: [pv_array],
                                                                            charge_power: battery_kw,
-                                                                           discharge_power: battery_kw)
+                                                                           discharge_power: battery_kw,
+                                                                           electric_buss_type: buss_type)
     
     # puts pv_array.to_s
     # puts pv_inverter.to_s
