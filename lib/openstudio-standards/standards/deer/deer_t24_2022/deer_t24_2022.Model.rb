@@ -388,6 +388,10 @@ class DEERT242022 < DEER
     if OpenStudio::Model::ElectricLoadCenterDistribution.storageOperationSchemeValues.include? storage_operation_scheme 
       electric_load_center_distribution.setStorageOperationScheme(storage_operation_scheme)
       case storage_operation_scheme
+      when "TrackFacilityElectricDemandStoreExcessOnSite"
+        electric_load_center_distribution.setStorageConverter(storage_converter)
+        electric_load_center_distribution.setDesignStorageControlChargePower(charge_power * 1000)
+        electric_load_center_distribution.setDesignStorageControlDischargePower(discharge_power * 1000)
       when "FacilityDemandLeveling"
         electric_load_center_distribution.setStorageControlUtilityDemandTarget(utility_demand_target * 1000) unless utility_demand_target.nil?
         electric_load_center_distribution.setStorageControlUtilityDemandTargetFractionSchedule(model.alwaysOnDiscreteSchedule)
@@ -433,7 +437,6 @@ class DEERT242022 < DEER
     model.getSpaces.each do |space|
       # exclude plenums
       next if space_plenum?(space)
-      puts space.name.get
       cooled = space_cooled?(space)
       heated = space_heated?(space)
       if heated || cooled
