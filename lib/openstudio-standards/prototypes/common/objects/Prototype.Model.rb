@@ -2126,6 +2126,9 @@ Standard.class_eval do
     # vars << ['Daylighting Lighting Power Multiplier','hourly']
     # vars << ['Schedule Value','hourly']
 
+    vars << ['Facility Total Electricity Demand Rate', 'hourly']
+    vars << ['Facility Total Produced Electricity Rate', 'hourly']
+    vars << ['Facility Net Purchased Electricity Rate', 'hourly']
     vars << ['Electric Storage Simple Charge State', 'hourly']
     vars << ['Electric Storage Charge Power', 'hourly']
     vars << ['Electric Storage Discharge Power', 'hourly']
