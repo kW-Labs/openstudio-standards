@@ -42,6 +42,12 @@ class Standard
       else # This type of fan should not exist in the prototype models
         return false
       end
+    #if the fan lives in a unitary system
+    elsif fan_constant_volume.containingHVACComponent.is_initialized
+      hvac = fan_constant_volume.containingHVACComponent.get
+      if hvac.to_AirLoopHVACUnitarySystem.is_initialized
+        pressure_rise_in_h2o = 2.5 # TODO: set per DEER prototypes
+      end
     # If the fan lives on an airloop
     elsif fan_constant_volume.airLoopHVAC.is_initialized
       pressure_rise_in_h2o = fan_constant_volume_airloop_fan_pressure_rise(fan_constant_volume)

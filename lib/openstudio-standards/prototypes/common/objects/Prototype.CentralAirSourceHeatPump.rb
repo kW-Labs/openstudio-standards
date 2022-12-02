@@ -69,6 +69,8 @@ class Standard
     hot_water_loop.supplyOutletNode.setpointManagers.each do |m|
       if m.to_SetpointManagerScheduled.is_initialized
         setpt_mgr_sch_sen.setKeyName(m.to_SetpointManagerScheduled.get.schedule.name.to_s)
+      elsif m.to_SetpointManagerScheduledDualSetpoint.is_initialized
+        setpt_mgr_sch_sen.setKeyName(m.to_SetpointManagerScheduledDualSetpoint.get.lowSetpointSchedule.get.name.to_s)
       end
     end
 

@@ -1,0 +1,18 @@
+{
+  "economizers": [
+    {
+      "template": "DEER T24 2022",
+      "climate_zone": "Any",
+      "data_center": false,
+      "capacity_limit": 55000,
+      "notes": "From MASControl2"
+    },
+    {
+      "template": "DEER T24 2022",
+      "climate_zone": "Any",
+      "data_center": true,
+      "capacity_limit": 55000,
+      "notes": "From MASControl2"
+    }
+  ]
+}

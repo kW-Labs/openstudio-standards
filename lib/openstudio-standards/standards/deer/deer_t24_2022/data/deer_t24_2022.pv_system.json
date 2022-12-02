@@ -1,0 +1,2356 @@
+{
+  "pv_system": [
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Asm",
+      "climate_zone_set": "CEC T24-CEC1",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Asm",
+      "climate_zone_set": "CEC T24-CEC10",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Asm",
+      "climate_zone_set": "CEC T24-CEC11",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Asm",
+      "climate_zone_set": "CEC T24-CEC12",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Asm",
+      "climate_zone_set": "CEC T24-CEC13",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Asm",
+      "climate_zone_set": "CEC T24-CEC14",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Asm",
+      "climate_zone_set": "CEC T24-CEC15",
+      "pv_capacity_per_square_foot": 0.58,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Asm",
+      "climate_zone_set": "CEC T24-CEC16",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Asm",
+      "climate_zone_set": "CEC T24-CEC2",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Asm",
+      "climate_zone_set": "CEC T24-CEC3",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Asm",
+      "climate_zone_set": "CEC T24-CEC4",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Asm",
+      "climate_zone_set": "CEC T24-CEC5",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Asm",
+      "climate_zone_set": "CEC T24-CEC6",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Asm",
+      "climate_zone_set": "CEC T24-CEC7",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Asm",
+      "climate_zone_set": "CEC T24-CEC8",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Asm",
+      "climate_zone_set": "CEC T24-CEC9",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ECC",
+      "climate_zone_set": "CEC T24-CEC1",
+      "pv_capacity_per_square_foot": 1.27,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ECC",
+      "climate_zone_set": "CEC T24-CEC10",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ECC",
+      "climate_zone_set": "CEC T24-CEC11",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ECC",
+      "climate_zone_set": "CEC T24-CEC12",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ECC",
+      "climate_zone_set": "CEC T24-CEC13",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ECC",
+      "climate_zone_set": "CEC T24-CEC14",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ECC",
+      "climate_zone_set": "CEC T24-CEC15",
+      "pv_capacity_per_square_foot": 2.46,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ECC",
+      "climate_zone_set": "CEC T24-CEC16",
+      "pv_capacity_per_square_foot": 1.27,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ECC",
+      "climate_zone_set": "CEC T24-CEC2",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ECC",
+      "climate_zone_set": "CEC T24-CEC3",
+      "pv_capacity_per_square_foot": 1.27,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ECC",
+      "climate_zone_set": "CEC T24-CEC4",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ECC",
+      "climate_zone_set": "CEC T24-CEC5",
+      "pv_capacity_per_square_foot": 1.27,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ECC",
+      "climate_zone_set": "CEC T24-CEC6",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ECC",
+      "climate_zone_set": "CEC T24-CEC7",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ECC",
+      "climate_zone_set": "CEC T24-CEC8",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ECC",
+      "climate_zone_set": "CEC T24-CEC9",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EPr",
+      "climate_zone_set": "CEC T24-CEC1",
+      "pv_capacity_per_square_foot": 1.27,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EPr",
+      "climate_zone_set": "CEC T24-CEC10",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EPr",
+      "climate_zone_set": "CEC T24-CEC11",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EPr",
+      "climate_zone_set": "CEC T24-CEC12",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EPr",
+      "climate_zone_set": "CEC T24-CEC13",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EPr",
+      "climate_zone_set": "CEC T24-CEC14",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EPr",
+      "climate_zone_set": "CEC T24-CEC15",
+      "pv_capacity_per_square_foot": 2.46,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EPr",
+      "climate_zone_set": "CEC T24-CEC16",
+      "pv_capacity_per_square_foot": 1.27,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EPr",
+      "climate_zone_set": "CEC T24-CEC2",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EPr",
+      "climate_zone_set": "CEC T24-CEC3",
+      "pv_capacity_per_square_foot": 1.27,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EPr",
+      "climate_zone_set": "CEC T24-CEC4",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EPr",
+      "climate_zone_set": "CEC T24-CEC5",
+      "pv_capacity_per_square_foot": 1.27,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EPr",
+      "climate_zone_set": "CEC T24-CEC6",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EPr",
+      "climate_zone_set": "CEC T24-CEC7",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EPr",
+      "climate_zone_set": "CEC T24-CEC8",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EPr",
+      "climate_zone_set": "CEC T24-CEC9",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ESe",
+      "climate_zone_set": "CEC T24-CEC1",
+      "pv_capacity_per_square_foot": 1.27,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ESe",
+      "climate_zone_set": "CEC T24-CEC10",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ESe",
+      "climate_zone_set": "CEC T24-CEC11",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ESe",
+      "climate_zone_set": "CEC T24-CEC12",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ESe",
+      "climate_zone_set": "CEC T24-CEC13",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ESe",
+      "climate_zone_set": "CEC T24-CEC14",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ESe",
+      "climate_zone_set": "CEC T24-CEC15",
+      "pv_capacity_per_square_foot": 2.46,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ESe",
+      "climate_zone_set": "CEC T24-CEC16",
+      "pv_capacity_per_square_foot": 1.27,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ESe",
+      "climate_zone_set": "CEC T24-CEC2",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ESe",
+      "climate_zone_set": "CEC T24-CEC3",
+      "pv_capacity_per_square_foot": 1.27,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ESe",
+      "climate_zone_set": "CEC T24-CEC4",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ESe",
+      "climate_zone_set": "CEC T24-CEC5",
+      "pv_capacity_per_square_foot": 1.27,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ESe",
+      "climate_zone_set": "CEC T24-CEC6",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ESe",
+      "climate_zone_set": "CEC T24-CEC7",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ESe",
+      "climate_zone_set": "CEC T24-CEC8",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "ESe",
+      "climate_zone_set": "CEC T24-CEC9",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EUn",
+      "climate_zone_set": "CEC T24-CEC1",
+      "pv_capacity_per_square_foot": 1.27,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EUn",
+      "climate_zone_set": "CEC T24-CEC10",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EUn",
+      "climate_zone_set": "CEC T24-CEC11",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EUn",
+      "climate_zone_set": "CEC T24-CEC12",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EUn",
+      "climate_zone_set": "CEC T24-CEC13",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EUn",
+      "climate_zone_set": "CEC T24-CEC14",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EUn",
+      "climate_zone_set": "CEC T24-CEC15",
+      "pv_capacity_per_square_foot": 2.46,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EUn",
+      "climate_zone_set": "CEC T24-CEC16",
+      "pv_capacity_per_square_foot": 1.27,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EUn",
+      "climate_zone_set": "CEC T24-CEC2",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EUn",
+      "climate_zone_set": "CEC T24-CEC3",
+      "pv_capacity_per_square_foot": 1.27,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EUn",
+      "climate_zone_set": "CEC T24-CEC4",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EUn",
+      "climate_zone_set": "CEC T24-CEC5",
+      "pv_capacity_per_square_foot": 1.27,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EUn",
+      "climate_zone_set": "CEC T24-CEC6",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EUn",
+      "climate_zone_set": "CEC T24-CEC7",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EUn",
+      "climate_zone_set": "CEC T24-CEC8",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "EUn",
+      "climate_zone_set": "CEC T24-CEC9",
+      "pv_capacity_per_square_foot": 1.63,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Gro",
+      "climate_zone_set": "CEC T24-CEC1",
+      "pv_capacity_per_square_foot": 2.62,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Gro",
+      "climate_zone_set": "CEC T24-CEC10",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Gro",
+      "climate_zone_set": "CEC T24-CEC11",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Gro",
+      "climate_zone_set": "CEC T24-CEC12",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Gro",
+      "climate_zone_set": "CEC T24-CEC13",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Gro",
+      "climate_zone_set": "CEC T24-CEC14",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Gro",
+      "climate_zone_set": "CEC T24-CEC15",
+      "pv_capacity_per_square_foot": 3.53,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Gro",
+      "climate_zone_set": "CEC T24-CEC16",
+      "pv_capacity_per_square_foot": 2.62,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Gro",
+      "climate_zone_set": "CEC T24-CEC2",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Gro",
+      "climate_zone_set": "CEC T24-CEC3",
+      "pv_capacity_per_square_foot": 2.62,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Gro",
+      "climate_zone_set": "CEC T24-CEC4",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Gro",
+      "climate_zone_set": "CEC T24-CEC5",
+      "pv_capacity_per_square_foot": 2.62,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Gro",
+      "climate_zone_set": "CEC T24-CEC6",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Gro",
+      "climate_zone_set": "CEC T24-CEC7",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Gro",
+      "climate_zone_set": "CEC T24-CEC8",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Gro",
+      "climate_zone_set": "CEC T24-CEC9",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Htl",
+      "climate_zone_set": "CEC T24-CEC1",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Htl",
+      "climate_zone_set": "CEC T24-CEC10",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Htl",
+      "climate_zone_set": "CEC T24-CEC11",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Htl",
+      "climate_zone_set": "CEC T24-CEC12",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Htl",
+      "climate_zone_set": "CEC T24-CEC13",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Htl",
+      "climate_zone_set": "CEC T24-CEC14",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Htl",
+      "climate_zone_set": "CEC T24-CEC15",
+      "pv_capacity_per_square_foot": 0.58,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Htl",
+      "climate_zone_set": "CEC T24-CEC16",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Htl",
+      "climate_zone_set": "CEC T24-CEC2",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Htl",
+      "climate_zone_set": "CEC T24-CEC3",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Htl",
+      "climate_zone_set": "CEC T24-CEC4",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Htl",
+      "climate_zone_set": "CEC T24-CEC5",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Htl",
+      "climate_zone_set": "CEC T24-CEC6",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Htl",
+      "climate_zone_set": "CEC T24-CEC7",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Htl",
+      "climate_zone_set": "CEC T24-CEC8",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Htl",
+      "climate_zone_set": "CEC T24-CEC9",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MBT",
+      "climate_zone_set": "CEC T24-CEC1",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MBT",
+      "climate_zone_set": "CEC T24-CEC10",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MBT",
+      "climate_zone_set": "CEC T24-CEC11",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MBT",
+      "climate_zone_set": "CEC T24-CEC12",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MBT",
+      "climate_zone_set": "CEC T24-CEC13",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MBT",
+      "climate_zone_set": "CEC T24-CEC14",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MBT",
+      "climate_zone_set": "CEC T24-CEC15",
+      "pv_capacity_per_square_foot": 0.58,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MBT",
+      "climate_zone_set": "CEC T24-CEC16",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MBT",
+      "climate_zone_set": "CEC T24-CEC2",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MBT",
+      "climate_zone_set": "CEC T24-CEC3",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MBT",
+      "climate_zone_set": "CEC T24-CEC4",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MBT",
+      "climate_zone_set": "CEC T24-CEC5",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MBT",
+      "climate_zone_set": "CEC T24-CEC6",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MBT",
+      "climate_zone_set": "CEC T24-CEC7",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MBT",
+      "climate_zone_set": "CEC T24-CEC8",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MBT",
+      "climate_zone_set": "CEC T24-CEC9",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MFm",
+      "climate_zone_set": "CEC T24-CEC1",
+      "pv_capacity_per_square_foot": 1.82,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MFm",
+      "climate_zone_set": "CEC T24-CEC10",
+      "pv_capacity_per_square_foot": 2.21,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MFm",
+      "climate_zone_set": "CEC T24-CEC11",
+      "pv_capacity_per_square_foot": 2.21,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MFm",
+      "climate_zone_set": "CEC T24-CEC12",
+      "pv_capacity_per_square_foot": 2.21,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MFm",
+      "climate_zone_set": "CEC T24-CEC13",
+      "pv_capacity_per_square_foot": 2.21,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MFm",
+      "climate_zone_set": "CEC T24-CEC14",
+      "pv_capacity_per_square_foot": 2.21,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MFm",
+      "climate_zone_set": "CEC T24-CEC15",
+      "pv_capacity_per_square_foot": 2.77,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MFm",
+      "climate_zone_set": "CEC T24-CEC16",
+      "pv_capacity_per_square_foot": 1.82,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MFm",
+      "climate_zone_set": "CEC T24-CEC2",
+      "pv_capacity_per_square_foot": 2.21,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MFm",
+      "climate_zone_set": "CEC T24-CEC3",
+      "pv_capacity_per_square_foot": 1.82,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MFm",
+      "climate_zone_set": "CEC T24-CEC4",
+      "pv_capacity_per_square_foot": 2.21,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MFm",
+      "climate_zone_set": "CEC T24-CEC5",
+      "pv_capacity_per_square_foot": 1.82,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MFm",
+      "climate_zone_set": "CEC T24-CEC6",
+      "pv_capacity_per_square_foot": 2.21,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MFm",
+      "climate_zone_set": "CEC T24-CEC7",
+      "pv_capacity_per_square_foot": 2.21,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MFm",
+      "climate_zone_set": "CEC T24-CEC8",
+      "pv_capacity_per_square_foot": 2.21,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MFm",
+      "climate_zone_set": "CEC T24-CEC9",
+      "pv_capacity_per_square_foot": 2.21,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MLI",
+      "climate_zone_set": "CEC T24-CEC1",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MLI",
+      "climate_zone_set": "CEC T24-CEC10",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MLI",
+      "climate_zone_set": "CEC T24-CEC11",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MLI",
+      "climate_zone_set": "CEC T24-CEC12",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MLI",
+      "climate_zone_set": "CEC T24-CEC13",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MLI",
+      "climate_zone_set": "CEC T24-CEC14",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MLI",
+      "climate_zone_set": "CEC T24-CEC15",
+      "pv_capacity_per_square_foot": 0.58,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MLI",
+      "climate_zone_set": "CEC T24-CEC16",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MLI",
+      "climate_zone_set": "CEC T24-CEC2",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MLI",
+      "climate_zone_set": "CEC T24-CEC3",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MLI",
+      "climate_zone_set": "CEC T24-CEC4",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MLI",
+      "climate_zone_set": "CEC T24-CEC5",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MLI",
+      "climate_zone_set": "CEC T24-CEC6",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MLI",
+      "climate_zone_set": "CEC T24-CEC7",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MLI",
+      "climate_zone_set": "CEC T24-CEC8",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "MLI",
+      "climate_zone_set": "CEC T24-CEC9",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Mtl",
+      "climate_zone_set": "CEC T24-CEC1",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Mtl",
+      "climate_zone_set": "CEC T24-CEC10",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Mtl",
+      "climate_zone_set": "CEC T24-CEC11",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Mtl",
+      "climate_zone_set": "CEC T24-CEC12",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Mtl",
+      "climate_zone_set": "CEC T24-CEC13",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Mtl",
+      "climate_zone_set": "CEC T24-CEC14",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Mtl",
+      "climate_zone_set": "CEC T24-CEC15",
+      "pv_capacity_per_square_foot": 0.58,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Mtl",
+      "climate_zone_set": "CEC T24-CEC16",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Mtl",
+      "climate_zone_set": "CEC T24-CEC2",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Mtl",
+      "climate_zone_set": "CEC T24-CEC3",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Mtl",
+      "climate_zone_set": "CEC T24-CEC4",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Mtl",
+      "climate_zone_set": "CEC T24-CEC5",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Mtl",
+      "climate_zone_set": "CEC T24-CEC6",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Mtl",
+      "climate_zone_set": "CEC T24-CEC7",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Mtl",
+      "climate_zone_set": "CEC T24-CEC8",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Mtl",
+      "climate_zone_set": "CEC T24-CEC9",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfL",
+      "climate_zone_set": "CEC T24-CEC1",
+      "pv_capacity_per_square_foot": 2.59,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfL",
+      "climate_zone_set": "CEC T24-CEC10",
+      "pv_capacity_per_square_foot": 3.13,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfL",
+      "climate_zone_set": "CEC T24-CEC11",
+      "pv_capacity_per_square_foot": 3.13,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfL",
+      "climate_zone_set": "CEC T24-CEC12",
+      "pv_capacity_per_square_foot": 3.13,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfL",
+      "climate_zone_set": "CEC T24-CEC13",
+      "pv_capacity_per_square_foot": 3.13,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfL",
+      "climate_zone_set": "CEC T24-CEC14",
+      "pv_capacity_per_square_foot": 3.13,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfL",
+      "climate_zone_set": "CEC T24-CEC15",
+      "pv_capacity_per_square_foot": 3.8,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfL",
+      "climate_zone_set": "CEC T24-CEC16",
+      "pv_capacity_per_square_foot": 2.59,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfL",
+      "climate_zone_set": "CEC T24-CEC2",
+      "pv_capacity_per_square_foot": 3.13,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfL",
+      "climate_zone_set": "CEC T24-CEC3",
+      "pv_capacity_per_square_foot": 2.59,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfL",
+      "climate_zone_set": "CEC T24-CEC4",
+      "pv_capacity_per_square_foot": 3.13,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfL",
+      "climate_zone_set": "CEC T24-CEC5",
+      "pv_capacity_per_square_foot": 2.59,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfL",
+      "climate_zone_set": "CEC T24-CEC6",
+      "pv_capacity_per_square_foot": 3.13,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfL",
+      "climate_zone_set": "CEC T24-CEC7",
+      "pv_capacity_per_square_foot": 3.13,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfL",
+      "climate_zone_set": "CEC T24-CEC8",
+      "pv_capacity_per_square_foot": 3.13,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfL",
+      "climate_zone_set": "CEC T24-CEC9",
+      "pv_capacity_per_square_foot": 3.13,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfS",
+      "climate_zone_set": "CEC T24-CEC1",
+      "pv_capacity_per_square_foot": 2.59,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfS",
+      "climate_zone_set": "CEC T24-CEC10",
+      "pv_capacity_per_square_foot": 3.13,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfS",
+      "climate_zone_set": "CEC T24-CEC11",
+      "pv_capacity_per_square_foot": 3.13,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfS",
+      "climate_zone_set": "CEC T24-CEC12",
+      "pv_capacity_per_square_foot": 3.13,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfS",
+      "climate_zone_set": "CEC T24-CEC13",
+      "pv_capacity_per_square_foot": 3.13,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfS",
+      "climate_zone_set": "CEC T24-CEC14",
+      "pv_capacity_per_square_foot": 3.13,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfS",
+      "climate_zone_set": "CEC T24-CEC15",
+      "pv_capacity_per_square_foot": 3.8,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfS",
+      "climate_zone_set": "CEC T24-CEC16",
+      "pv_capacity_per_square_foot": 2.59,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfS",
+      "climate_zone_set": "CEC T24-CEC2",
+      "pv_capacity_per_square_foot": 3.13,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfS",
+      "climate_zone_set": "CEC T24-CEC3",
+      "pv_capacity_per_square_foot": 2.59,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfS",
+      "climate_zone_set": "CEC T24-CEC4",
+      "pv_capacity_per_square_foot": 3.13,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfS",
+      "climate_zone_set": "CEC T24-CEC5",
+      "pv_capacity_per_square_foot": 2.59,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfS",
+      "climate_zone_set": "CEC T24-CEC6",
+      "pv_capacity_per_square_foot": 3.13,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfS",
+      "climate_zone_set": "CEC T24-CEC7",
+      "pv_capacity_per_square_foot": 3.13,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfS",
+      "climate_zone_set": "CEC T24-CEC8",
+      "pv_capacity_per_square_foot": 3.13,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "OfS",
+      "climate_zone_set": "CEC T24-CEC9",
+      "pv_capacity_per_square_foot": 3.13,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RFF",
+      "climate_zone_set": "CEC T24-CEC1",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RFF",
+      "climate_zone_set": "CEC T24-CEC10",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RFF",
+      "climate_zone_set": "CEC T24-CEC11",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RFF",
+      "climate_zone_set": "CEC T24-CEC12",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RFF",
+      "climate_zone_set": "CEC T24-CEC13",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RFF",
+      "climate_zone_set": "CEC T24-CEC14",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RFF",
+      "climate_zone_set": "CEC T24-CEC15",
+      "pv_capacity_per_square_foot": 0.58,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RFF",
+      "climate_zone_set": "CEC T24-CEC16",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RFF",
+      "climate_zone_set": "CEC T24-CEC2",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RFF",
+      "climate_zone_set": "CEC T24-CEC3",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RFF",
+      "climate_zone_set": "CEC T24-CEC4",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RFF",
+      "climate_zone_set": "CEC T24-CEC5",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RFF",
+      "climate_zone_set": "CEC T24-CEC6",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RFF",
+      "climate_zone_set": "CEC T24-CEC7",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RFF",
+      "climate_zone_set": "CEC T24-CEC8",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RFF",
+      "climate_zone_set": "CEC T24-CEC9",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RSD",
+      "climate_zone_set": "CEC T24-CEC1",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RSD",
+      "climate_zone_set": "CEC T24-CEC10",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RSD",
+      "climate_zone_set": "CEC T24-CEC11",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RSD",
+      "climate_zone_set": "CEC T24-CEC12",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RSD",
+      "climate_zone_set": "CEC T24-CEC13",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RSD",
+      "climate_zone_set": "CEC T24-CEC14",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RSD",
+      "climate_zone_set": "CEC T24-CEC15",
+      "pv_capacity_per_square_foot": 0.58,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RSD",
+      "climate_zone_set": "CEC T24-CEC16",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RSD",
+      "climate_zone_set": "CEC T24-CEC2",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RSD",
+      "climate_zone_set": "CEC T24-CEC3",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RSD",
+      "climate_zone_set": "CEC T24-CEC4",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RSD",
+      "climate_zone_set": "CEC T24-CEC5",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RSD",
+      "climate_zone_set": "CEC T24-CEC6",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RSD",
+      "climate_zone_set": "CEC T24-CEC7",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RSD",
+      "climate_zone_set": "CEC T24-CEC8",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RSD",
+      "climate_zone_set": "CEC T24-CEC9",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Rt3",
+      "climate_zone_set": "CEC T24-CEC1",
+      "pv_capacity_per_square_foot": 2.62,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Rt3",
+      "climate_zone_set": "CEC T24-CEC10",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Rt3",
+      "climate_zone_set": "CEC T24-CEC11",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Rt3",
+      "climate_zone_set": "CEC T24-CEC12",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Rt3",
+      "climate_zone_set": "CEC T24-CEC13",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Rt3",
+      "climate_zone_set": "CEC T24-CEC14",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Rt3",
+      "climate_zone_set": "CEC T24-CEC15",
+      "pv_capacity_per_square_foot": 3.53,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Rt3",
+      "climate_zone_set": "CEC T24-CEC16",
+      "pv_capacity_per_square_foot": 2.62,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Rt3",
+      "climate_zone_set": "CEC T24-CEC2",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Rt3",
+      "climate_zone_set": "CEC T24-CEC3",
+      "pv_capacity_per_square_foot": 2.62,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Rt3",
+      "climate_zone_set": "CEC T24-CEC4",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Rt3",
+      "climate_zone_set": "CEC T24-CEC5",
+      "pv_capacity_per_square_foot": 2.62,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Rt3",
+      "climate_zone_set": "CEC T24-CEC6",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Rt3",
+      "climate_zone_set": "CEC T24-CEC7",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Rt3",
+      "climate_zone_set": "CEC T24-CEC8",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "Rt3",
+      "climate_zone_set": "CEC T24-CEC9",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtL",
+      "climate_zone_set": "CEC T24-CEC1",
+      "pv_capacity_per_square_foot": 2.62,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtL",
+      "climate_zone_set": "CEC T24-CEC10",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtL",
+      "climate_zone_set": "CEC T24-CEC11",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtL",
+      "climate_zone_set": "CEC T24-CEC12",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtL",
+      "climate_zone_set": "CEC T24-CEC13",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtL",
+      "climate_zone_set": "CEC T24-CEC14",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtL",
+      "climate_zone_set": "CEC T24-CEC15",
+      "pv_capacity_per_square_foot": 3.53,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtL",
+      "climate_zone_set": "CEC T24-CEC16",
+      "pv_capacity_per_square_foot": 2.62,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtL",
+      "climate_zone_set": "CEC T24-CEC2",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtL",
+      "climate_zone_set": "CEC T24-CEC3",
+      "pv_capacity_per_square_foot": 2.62,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtL",
+      "climate_zone_set": "CEC T24-CEC4",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtL",
+      "climate_zone_set": "CEC T24-CEC5",
+      "pv_capacity_per_square_foot": 2.62,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtL",
+      "climate_zone_set": "CEC T24-CEC6",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtL",
+      "climate_zone_set": "CEC T24-CEC7",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtL",
+      "climate_zone_set": "CEC T24-CEC8",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtL",
+      "climate_zone_set": "CEC T24-CEC9",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtS",
+      "climate_zone_set": "CEC T24-CEC1",
+      "pv_capacity_per_square_foot": 2.62,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtS",
+      "climate_zone_set": "CEC T24-CEC10",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtS",
+      "climate_zone_set": "CEC T24-CEC11",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtS",
+      "climate_zone_set": "CEC T24-CEC12",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtS",
+      "climate_zone_set": "CEC T24-CEC13",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtS",
+      "climate_zone_set": "CEC T24-CEC14",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtS",
+      "climate_zone_set": "CEC T24-CEC15",
+      "pv_capacity_per_square_foot": 3.53,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtS",
+      "climate_zone_set": "CEC T24-CEC16",
+      "pv_capacity_per_square_foot": 2.62,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtS",
+      "climate_zone_set": "CEC T24-CEC2",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtS",
+      "climate_zone_set": "CEC T24-CEC3",
+      "pv_capacity_per_square_foot": 2.62,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtS",
+      "climate_zone_set": "CEC T24-CEC4",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtS",
+      "climate_zone_set": "CEC T24-CEC5",
+      "pv_capacity_per_square_foot": 2.62,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtS",
+      "climate_zone_set": "CEC T24-CEC6",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtS",
+      "climate_zone_set": "CEC T24-CEC7",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtS",
+      "climate_zone_set": "CEC T24-CEC8",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "RtS",
+      "climate_zone_set": "CEC T24-CEC9",
+      "pv_capacity_per_square_foot": 2.91,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SCn",
+      "climate_zone_set": "CEC T24-CEC1",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SCn",
+      "climate_zone_set": "CEC T24-CEC10",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SCn",
+      "climate_zone_set": "CEC T24-CEC11",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SCn",
+      "climate_zone_set": "CEC T24-CEC12",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SCn",
+      "climate_zone_set": "CEC T24-CEC13",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SCn",
+      "climate_zone_set": "CEC T24-CEC14",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SCn",
+      "climate_zone_set": "CEC T24-CEC15",
+      "pv_capacity_per_square_foot": 0.58,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SCn",
+      "climate_zone_set": "CEC T24-CEC16",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SCn",
+      "climate_zone_set": "CEC T24-CEC2",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SCn",
+      "climate_zone_set": "CEC T24-CEC3",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SCn",
+      "climate_zone_set": "CEC T24-CEC4",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SCn",
+      "climate_zone_set": "CEC T24-CEC5",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SCn",
+      "climate_zone_set": "CEC T24-CEC6",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SCn",
+      "climate_zone_set": "CEC T24-CEC7",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SCn",
+      "climate_zone_set": "CEC T24-CEC8",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SCn",
+      "climate_zone_set": "CEC T24-CEC9",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SUn",
+      "climate_zone_set": "CEC T24-CEC1",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SUn",
+      "climate_zone_set": "CEC T24-CEC10",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SUn",
+      "climate_zone_set": "CEC T24-CEC11",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SUn",
+      "climate_zone_set": "CEC T24-CEC12",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SUn",
+      "climate_zone_set": "CEC T24-CEC13",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SUn",
+      "climate_zone_set": "CEC T24-CEC14",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SUn",
+      "climate_zone_set": "CEC T24-CEC15",
+      "pv_capacity_per_square_foot": 0.58,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SUn",
+      "climate_zone_set": "CEC T24-CEC16",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SUn",
+      "climate_zone_set": "CEC T24-CEC2",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SUn",
+      "climate_zone_set": "CEC T24-CEC3",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SUn",
+      "climate_zone_set": "CEC T24-CEC4",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SUn",
+      "climate_zone_set": "CEC T24-CEC5",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SUn",
+      "climate_zone_set": "CEC T24-CEC6",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SUn",
+      "climate_zone_set": "CEC T24-CEC7",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SUn",
+      "climate_zone_set": "CEC T24-CEC8",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "SUn",
+      "climate_zone_set": "CEC T24-CEC9",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "WRf",
+      "climate_zone_set": "CEC T24-CEC1",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "WRf",
+      "climate_zone_set": "CEC T24-CEC10",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "WRf",
+      "climate_zone_set": "CEC T24-CEC11",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "WRf",
+      "climate_zone_set": "CEC T24-CEC12",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "WRf",
+      "climate_zone_set": "CEC T24-CEC13",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "WRf",
+      "climate_zone_set": "CEC T24-CEC14",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "WRf",
+      "climate_zone_set": "CEC T24-CEC15",
+      "pv_capacity_per_square_foot": 0.58,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "WRf",
+      "climate_zone_set": "CEC T24-CEC16",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "WRf",
+      "climate_zone_set": "CEC T24-CEC2",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "WRf",
+      "climate_zone_set": "CEC T24-CEC3",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "WRf",
+      "climate_zone_set": "CEC T24-CEC4",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "WRf",
+      "climate_zone_set": "CEC T24-CEC5",
+      "pv_capacity_per_square_foot": 0.39,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "WRf",
+      "climate_zone_set": "CEC T24-CEC6",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "WRf",
+      "climate_zone_set": "CEC T24-CEC7",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "WRf",
+      "climate_zone_set": "CEC T24-CEC8",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    },
+    {
+      "template": "DEER T24 2022",
+      "building_type": "WRf",
+      "climate_zone_set": "CEC T24-CEC9",
+      "pv_capacity_per_square_foot": 0.44,
+      "notes": "From T24 2022 Table 140.10-A"
+    }
+  ]
+}

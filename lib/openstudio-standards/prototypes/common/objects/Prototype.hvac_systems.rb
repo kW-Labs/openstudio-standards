@@ -4311,6 +4311,8 @@ class Standard
 
       # add to main condensing unit
       vrf_outdoor_unit.addTerminal(vrf_terminal_unit)
+
+      vrfs << vrf_terminal_unit
     end
 
     return vrfs
