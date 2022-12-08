@@ -6,7 +6,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed DX AC",
     "heating_type": "Gas",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Gas",
     "space_names": [
       "EL1 East Perim Spc (G.E1)"
@@ -20,7 +20,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed DX AC",
     "heating_type": "Gas",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Gas",
     "space_names": [
       "EL1 NNE Perim Spc (G.NNE2)"
@@ -34,7 +34,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed DX AC",
     "heating_type": "Gas",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Gas",
     "space_names": [
       "EL1 SSE Perim Spc (G.SSE3)"
@@ -48,7 +48,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed DX AC",
     "heating_type": "Gas",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Gas",
     "space_names": [
       "EL1 West Perim Spc (G.W4)"
@@ -62,7 +62,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed DX AC",
     "heating_type": "Gas",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Gas",
     "space_names": [
       "EL2 SSW Perim Spc (G.SSW1)"
@@ -75,7 +75,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed DX AC",
     "heating_type": "Gas",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Gas",
     "space_names": [
       "EL2 North Perim Spc (G.N2)"

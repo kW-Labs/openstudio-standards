@@ -85,7 +85,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed DX AC",
     "heating_type": "Gas",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Gas",
     "space_names": [
       "E4 Core Spc (G.C5)"
@@ -99,7 +99,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed DX AC",
     "heating_type": "Gas",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Gas",
     "space_names": [
       "E4 Core Spc (M.C17)"
@@ -113,7 +113,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed DX AC",
     "heating_type": "Gas",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Gas",
     "space_names": [
       "E4 Core Spc (T.C29)"
@@ -171,7 +171,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed DX AC",
     "heating_type": "Gas",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Gas",
     "space_names": [
       "E9 Core Spc (G.C3)"
@@ -184,7 +184,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed DX AC",
     "heating_type": "Gas",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Gas",
     "space_names": [
       "E9 Core Spc (M.C6)"
@@ -197,7 +197,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed DX AC",
     "heating_type": "Gas",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Gas",
     "space_names": [
       "E9 Core Spc (T.C9)"
