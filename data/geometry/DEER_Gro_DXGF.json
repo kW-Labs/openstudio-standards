@@ -37,5 +37,44 @@
     "space_names": [
       "EL1 SSE Perim Spc (G.SSE1)"
     ]
+  },
+  {
+    "name": "EL1 Sys2 (PVVT) (G.C4)",
+    "type": "PSZ-AC",
+    "operation_schedule": null,
+    "oa_damper_schedule": null,
+    "cooling_type": "Single Speed DX AC",
+    "heating_type": "Gas",
+    "fan_type": "Cycling",
+    "supplemental_heating_type": "Gas",
+    "space_names": [
+      "EL1 Core Spc (G.C4)"
+    ]
+  },
+  {
+    "name": "EL1 Sys2 (PVVT) (G.C5)",
+    "type": "PSZ-AC",
+    "operation_schedule": null,
+    "oa_damper_schedule": null,
+    "cooling_type": "Single Speed DX AC",
+    "heating_type": "Gas",
+    "fan_type": "Cycling",
+    "supplemental_heating_type": "Gas",
+    "space_names": [
+      "EL1 Core Spc (G.C5)"
+    ]
+  },
+  {
+    "name": "EL1 Sys2 (PVVT) (G.C6)",
+    "type": "PSZ-AC",
+    "operation_schedule": null,
+    "oa_damper_schedule": null,
+    "cooling_type": "Single Speed DX AC",
+    "heating_type": "Gas",
+    "fan_type": "Cycling",
+    "supplemental_heating_type": "Gas",
+    "space_names": [
+      "EL1 Core Spc (G.C6)"
+    ]
   }
 ]
