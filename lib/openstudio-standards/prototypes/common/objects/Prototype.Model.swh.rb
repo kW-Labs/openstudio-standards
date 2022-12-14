@@ -170,6 +170,11 @@ class Standard
         end
 
         OpenStudio.logFree(OpenStudio::Info, 'openstudio.model.Model', "Added #{water_fixtures.size} water fixtures to model")
+
+        if water_fixtures.size == 0
+          OpenStudio.logFree(OpenStudio::Info, 'openstudio.model.Model', "No water fixtures added to model - removing SWH loop")
+          main_swh_loop.remove
+        end
       end
     end
 
