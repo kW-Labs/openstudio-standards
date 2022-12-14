@@ -27,7 +27,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed DX AC",
     "heating_type": "Electricity",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Electricity",
     "space_names": [
       "EL2 South Perim Spc (G.S1)"
@@ -41,7 +41,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed DX AC",
     "heating_type": "Electricity",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Electricity",
     "space_names": [
       "EL3 North Perim Spc (G.N1)"
@@ -55,7 +55,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed DX AC",
     "heating_type": "Electricity",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Electricity",
     "space_names": [
       "EL4 Core Spc (G.C5)"
@@ -69,7 +69,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed DX AC",
     "heating_type": "Electricity",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Electricity",
     "space_names": [
       "EL4 Core Spc (M.C15)"
@@ -83,7 +83,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed DX AC",
     "heating_type": "Electricity",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Electricity",
     "space_names": [
       "EL4 Core Spc (T.C25)"
@@ -97,7 +97,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed DX AC",
     "heating_type": "Electricity",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Electricity",
     "space_names": [
       "EL4 North Perim Spc (G.N1)",
@@ -113,7 +113,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed DX AC",
     "heating_type": "Electricity",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Electricity",
     "space_names": [
       "EL4 North Perim Spc (M.N11)",
@@ -129,7 +129,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed DX AC",
     "heating_type": "Electricity",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Electricity",
     "space_names": [
       "EL4 North Perim Spc (T.N21)",

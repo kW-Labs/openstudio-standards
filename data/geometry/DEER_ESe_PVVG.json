@@ -34,7 +34,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed DX AC",
     "heating_type": "Gas",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Gas",
     "space_names": [
       "E1 West Perim Spc (G.W1)"
@@ -47,7 +47,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed DX AC",
     "heating_type": "Gas",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Gas",
     "space_names": [
       "E3 SW Perim Spc (G.SW1)"
@@ -60,7 +60,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed DX AC",
     "heating_type": "Gas",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Gas",
     "space_names": [
       "E4 Core Spc (G.C5)"
@@ -74,7 +74,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed DX AC",
     "heating_type": "Gas",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Gas",
     "space_names": [
       "E17 West Perim Spc (G.W1)"
