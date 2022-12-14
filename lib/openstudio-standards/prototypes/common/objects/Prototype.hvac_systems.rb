@@ -5973,7 +5973,7 @@ class Standard
                        heating_type: heating_type,
                        supplemental_heating_type: supplemental_heating_type,
                        fan_location: 'DrawThrough',
-                       fan_type: 'ConstantVolume')
+                       fan_type: 'Cycling')
 
     when 'PSZ-HP'
       model_add_psz_ac(model,
@@ -5983,7 +5983,7 @@ class Standard
                        heating_type: 'Single Speed Heat Pump',
                        supplemental_heating_type: 'Electricity',
                        fan_location: 'DrawThrough',
-                       fan_type: 'ConstantVolume')
+                       fan_type: 'Cycling')
 
     when 'PSZ-VAV'
       if main_heat_fuel.nil?
