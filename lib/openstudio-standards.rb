@@ -76,7 +76,7 @@ module OpenstudioStandards
 
 
   # ECM development
-  require_relative "#{stds}/necb/ECMS/ecms.rb"
+  # require_relative "#{stds}/necb/ECMS/ecms.rb"
   require_relative "#{stds}/necb/ECMS/erv.rb"
   require_relative "#{stds}/necb/ECMS/hvac_systems.rb"
   require_relative "#{stds}/necb/ECMS/nv.rb"
@@ -324,7 +324,9 @@ module OpenstudioStandards
   require_relative "#{stds}/deer/deer.PlanarSurface"
   # DEER T24
   require_relative "#{stds}/deer/deer_t24_2022/deer_t24_2022.Model"
+  require_relative "#{stds}/deer/deer_t24_2022/deer_t24_2022.AirLoopHVAC"
   require_relative "#{stds}/deer/deer_t24_2022/deer_t24_2022.Surface"
+  require_relative "#{stds}/deer/deer_t24_2022/deer_t24_2022.Space"
   # CBES Common
   require_relative "#{stds}/cbes/cbes.AirLoopHVAC"
   require_relative "#{stds}/cbes/cbes.Model"
