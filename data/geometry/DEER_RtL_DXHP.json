@@ -6,7 +6,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed Heat Pump",
     "heating_type": "Single Speed Heat Pump",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Electricity",
     "space_names": [
       "EL1 South Perim Spc (G.S1)"
@@ -19,7 +19,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed Heat Pump",
     "heating_type": "Single Speed Heat Pump",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Electricity",
     "space_names": [
       "EL1 North Perim Spc (G.N2)"
@@ -32,7 +32,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed Heat Pump",
     "heating_type": "Single Speed Heat Pump",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Electricity",
     "space_names": [
       "EL1 East Perim Spc (G.E3)"
@@ -45,7 +45,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed Heat Pump",
     "heating_type": "Single Speed Heat Pump",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Electricity",
     "space_names": [
       "EL1 East Perim Spc (G.E4)"
@@ -58,7 +58,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed Heat Pump",
     "heating_type": "Single Speed Heat Pump",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Electricity",
     "space_names": [
       "EL1 WSW Perim Spc (G.WSW7)"
@@ -71,7 +71,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed Heat Pump",
     "heating_type": "Single Speed Heat Pump",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Electricity",
     "space_names": [
       "EL1 Core Spc (G.C8)"
@@ -84,7 +84,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed Heat Pump",
     "heating_type": "Single Speed Heat Pump",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Electricity",
     "space_names": [
       "EL1 West Perim Spc (G.W5)"
@@ -97,7 +97,7 @@
     "oa_damper_schedule": null,
     "cooling_type": "Single Speed Heat Pump",
     "heating_type": "Single Speed Heat Pump",
-    "fan_type": "ConstantVolume",
+    "fan_type": "Cycling",
     "supplemental_heating_type": "Electricity",
     "space_names": [
       "EL1 West Perim Spc (G.W6)"

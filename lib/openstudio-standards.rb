@@ -78,7 +78,7 @@ module OpenstudioStandards
   require_relative "#{stds}/necb/common/btap_datapoint.rb"
 
   # ECM development
-  require_relative "#{stds}/necb/ECMS/ecms.rb"
+  # require_relative "#{stds}/necb/ECMS/ecms.rb"
   require_relative "#{stds}/necb/ECMS/erv.rb"
   require_relative "#{stds}/necb/ECMS/hvac_systems.rb"
   require_relative "#{stds}/necb/ECMS/nv.rb"
@@ -148,6 +148,8 @@ module OpenstudioStandards
   require_relative "#{stds}/deer/deer_2070/comstock_deer_2070/comstock_deer_2070"
   require_relative "#{stds}/deer/deer_2075/deer_2075"
   require_relative "#{stds}/deer/deer_2075/comstock_deer_2075/comstock_deer_2075"
+  require_relative "#{stds}/deer/deer_t24_2022/deer_t24_2022"
+  
 
   require_relative "#{stds}/oeesc/oeesc"
   require_relative "#{stds}/oeesc/oeesc_2014/oeesc_2014"
@@ -177,6 +179,7 @@ module OpenstudioStandards
   require_relative "#{stds}/ashrae_90_1_prm/ashrae_90_1_prm.Fan"
 
   # Model Objects
+  require_relative "#{stds}/Standards.AirConditionerVariableRefrigerantFlow"
   require_relative "#{stds}/Standards.AirLoopHVAC"
   require_relative "#{stds}/Standards.AirTerminalSingleDuctParallelPIUReheat"
   require_relative "#{stds}/Standards.AirTerminalSingleDuctVAVReheat"
@@ -353,6 +356,11 @@ module OpenstudioStandards
   require_relative "#{stds}/deer/deer.AirLoopHVAC"
   require_relative "#{stds}/deer/deer.Space"
   require_relative "#{stds}/deer/deer.PlanarSurface"
+  # DEER T24
+  require_relative "#{stds}/deer/deer_t24_2022/deer_t24_2022.Model"
+  require_relative "#{stds}/deer/deer_t24_2022/deer_t24_2022.AirLoopHVAC"
+  require_relative "#{stds}/deer/deer_t24_2022/deer_t24_2022.Surface"
+  require_relative "#{stds}/deer/deer_t24_2022/deer_t24_2022.Space"
   # CBES Common
   require_relative "#{stds}/cbes/cbes.AirLoopHVAC"
   require_relative "#{stds}/cbes/cbes.Model"

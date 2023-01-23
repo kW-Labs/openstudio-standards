@@ -154,6 +154,12 @@ def unique_properties(sheet_name)
            ['template', 'climate_zone', 'under_8000_hours', 'nontransient_dwelling', 'enthalpy_recovery_ratio_design_conditions']
          when 'space_types_lighting_control'
            ['template', 'building_type', 'space_type']
+         when 'pv_system'
+           ['template', 'building_type', 'climate_zone_set', 'pv_capacity_per_square_foot']
+         when 'battery_storage_system'
+           ['template', 'building_type', 'battery_storage_factor_b_energy_capacity', 'battery_storage_factor_c_power_capacity']
+         when 'air_conditioner_vrf'
+           ['template', 'cooling_type', 'heating_type', 'subcategory', 'minimum_capacity', 'maximum_capacity', 'minimum_seasonal_energy_efficiency_ratio', 'minimum_energy_efficiency_ratio', 'minimum_integrated_energy_efficiency_ratio', 'minimum_heating_efficiency', 'minimum_heating_seasonal_performance_factor']
          when 'prm_hvac_bldg_type'
            ['template', 'hvac_building_type']
          when 'prm_swh_bldg_type'

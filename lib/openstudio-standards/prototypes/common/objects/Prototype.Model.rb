@@ -45,6 +45,10 @@ Standard.class_eval do
     model_add_design_days_and_weather_file(model, climate_zone, epw_file)
     model_add_hvac(model, @instvarbuilding_type, climate_zone, @prototype_input)
     model_add_constructions(model, @instvarbuilding_type, climate_zone)
+    # create title 24 specific constructions for DEER prototypes
+    if template.include? "DEER T24"
+      model_set_subsurface_constructions(model, @instvarbuilding_type, climate_zone)
+    end
     model_fenestration_orientation(model, climate_zone)
     model_custom_hvac_tweaks(model, building_type, climate_zone, @prototype_input)
     model_add_transfer_air(model)
@@ -86,6 +90,13 @@ Standard.class_eval do
     # Add daylighting controls per standard
     # only four zones in large hotel have daylighting controls
     # @todo YXC to merge to the main function
+
+    # create title 24 specific constructions for DEER prototypes
+    if template.include? "DEER T24"
+      model_create_t24_pv_storage_system(model, @instvarbuilding_type, climate_zone)
+    end
+
+
     model_add_daylighting_controls(model)
     model_custom_daylighting_tweaks(model, building_type, climate_zone, @prototype_input)
     model_update_exhaust_fan_efficiency(model)
@@ -2099,14 +2110,14 @@ Standard.class_eval do
     # vars << ['Air System Mixed Air Mass Flow Rate','timestep']
 
     # vars << ['Heating Coil Gas Rate','timestep']
-    vars << ['Boiler Part Load Ratio', 'timestep']
-    vars << ['Boiler Gas Rate', 'timestep']
+    # vars << ['Boiler Part Load Ratio', 'timestep']
+    # vars << ['Boiler Gas Rate', 'timestep']
     # vars << ['Boiler Gas Rate','timestep']
     # vars << ['Fan Electric Power','timestep']
 
-    vars << ['Pump Electric Power', 'timestep']
-    vars << ['Pump Outlet Temperature', 'timestep']
-    vars << ['Pump Mass Flow Rate', 'timestep']
+    # vars << ['Pump Electric Power', 'timestep']
+    # vars << ['Pump Outlet Temperature', 'timestep']
+    # vars << ['Pump Mass Flow Rate', 'timestep']
 
     # vars << ['Zone Air Terminal VAV Damper Position','timestep']
     # vars << ['Zone Air Terminal Minimum Air Flow Fraction','timestep']
@@ -2114,6 +2125,16 @@ Standard.class_eval do
     # vars << ['Zone Lights Electric Power','hourly']
     # vars << ['Daylighting Lighting Power Multiplier','hourly']
     # vars << ['Schedule Value','hourly']
+
+    vars << ['Facility Total Electricity Demand Rate', 'hourly']
+    vars << ['Facility Total Produced Electricity Rate', 'hourly']
+    vars << ['Facility Net Purchased Electricity Rate', 'hourly']
+    vars << ['Electric Storage Simple Charge State', 'hourly']
+    vars << ['Electric Storage Charge Power', 'hourly']
+    vars << ['Electric Storage Discharge Power', 'hourly']
+    vars << ['Inverter DC Input Electricity Rate', 'hourly']
+    vars << ['Inverter AC Output Electricity Rate', 'hourly']
+    vars << ['Generator Produced DC Electricity Rate', 'hourly']
 
     vars.each do |var, freq|
       output_var = OpenStudio::Model::OutputVariable.new(var, model)

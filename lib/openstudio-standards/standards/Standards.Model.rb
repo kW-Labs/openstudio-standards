@@ -2314,6 +2314,9 @@ class Standard
     model.getCoilHeatingWaterToAirHeatPumpEquationFits.sort.each { |obj| sql_db_vars_map = coil_heating_water_to_air_heat_pump_apply_efficiency_and_curves(obj, sql_db_vars_map) }
     model.getCoilCoolingWaterToAirHeatPumpEquationFits.sort.each { |obj| sql_db_vars_map = coil_cooling_water_to_air_heat_pump_apply_efficiency_and_curves(obj, sql_db_vars_map) }
 
+    # Air Conditioner VRFs
+    model.getAirConditionerVariableRefrigerantFlows.sort.each { |obj| sql_db_vars_map = air_conditioner_variable_refrigerant_flow_apply_efficiency_and_curves(obj, sql_db_vars_map) }
+
     # Chillers
     clg_tower_objs = model.getCoolingTowerSingleSpeeds
     model.getChillerElectricEIRs.sort.each { |obj| chiller_electric_eir_apply_efficiency_and_curves(obj, clg_tower_objs) }

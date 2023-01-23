@@ -1,0 +1,40 @@
+{
+  "water_source_heat_pumps": [
+    {
+      "template": "DEER T24 2022",
+      "minimum_capacity": 0,
+      "maximum_capacity": 134999,
+      "start_date": "1919-09-09T00:00:00+00:00",
+      "end_date": "2999-09-09T00:00:00+00:00",
+      "minimum_full_load_efficiency": 12.1,
+      "notes": "From Title 24 2022"
+    },
+    {
+      "template": "DEER T24 2022",
+      "minimum_capacity": 135000,
+      "maximum_capacity": 239999,
+      "start_date": "1919-09-09T00:00:00+00:00",
+      "end_date": "2999-09-09T00:00:00+00:00",
+      "minimum_full_load_efficiency": 12.5,
+      "notes": "From Title 24 2022"
+    },
+    {
+      "template": "DEER T24 2022",
+      "minimum_capacity": 240000,
+      "maximum_capacity": 759999,
+      "start_date": "1919-09-09T00:00:00+00:00",
+      "end_date": "2999-09-09T00:00:00+00:00",
+      "minimum_full_load_efficiency": 12.4,
+      "notes": "From Title 24 2022"
+    },
+    {
+      "template": "DEER T24 2022",
+      "minimum_capacity": 760000,
+      "maximum_capacity": 9999999,
+      "start_date": "1919-09-09T00:00:00+00:00",
+      "end_date": "2999-09-09T00:00:00+00:00",
+      "minimum_full_load_efficiency": 12.2,
+      "notes": "From Title 24 2022"
+    }
+  ]
+}

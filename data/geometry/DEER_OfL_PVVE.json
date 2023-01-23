@@ -13,5 +13,35 @@
       "EL1 Core Spc (G.C5)"
     ],
     "return_plenum": "EL1 Core Plnm (G.C10)"
+  },
+  {
+    "name": "EL1 Sys1 (PVAVS) (G)",
+    "type": "PVAV",
+    "operation_schedule": null,
+    "oa_damper_schedule": null,
+    "heating_type": "Electricity",
+    "space_names": [
+      "EL1 East Perim Spc (M.E12)",
+      "EL1 South Perim Spc (M.S11)",
+      "EL1 Core Spc (M.C15)",
+      "EL1 North Perim Spc (M.N13)",
+      "EL1 West Perim Spc (M.W14)"
+    ],
+    "return_plenum": "EL1 Core Plnm (M.C20)"
+  },
+  {
+    "name": "EL1 Sys1 (PVAVS) (G)",
+    "type": "PVAV",
+    "operation_schedule": null,
+    "oa_damper_schedule": null,
+    "heating_type": "Electricity",
+    "space_names": [
+      "EL1 North Perim Spc (T.N23)",
+      "EL1 West Perim Spc (T.W24)",
+      "EL1 South Perim Spc (T.S21)",
+      "EL1 East Perim Spc (T.E22)",
+      "EL1 Core Spc (T.C25)"
+    ],
+    "return_plenum": "EL1 Core Plnm (T.C30)"
   }
 ]

@@ -535,7 +535,8 @@ def create_deer_class_array
     'DEER2011' => 'DEER 2011',
     'DEER2014' => 'DEER 2014',
     'DEER2015' => 'DEER 2015',
-    'DEER2017' => 'DEER 2017'
+    'DEER2017' => 'DEER 2017',
+    'DEERT242022' => 'DEER T24 2022'
   }
 
   class_array = []

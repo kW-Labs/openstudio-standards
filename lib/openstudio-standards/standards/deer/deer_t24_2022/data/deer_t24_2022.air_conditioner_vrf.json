@@ -1,0 +1,60 @@
+{
+  "air_conditioner_vrf": [
+    {
+      "template": "DEER T24 2022",
+      "cooling_type": "AirCooled",
+      "heating_type": "HeatPump",
+      "subcategory": null,
+      "minimum_capacity": 0,
+      "maximum_capacity": 64999,
+      "minimum_seasonal_energy_efficiency_ratio": 13,
+      "minimum_energy_efficiency_ratio": null,
+      "minimum_integrated_energy_efficiency_ratio": null,
+      "minimum_heating_efficiency": null,
+      "minimum_heating_seasonal_performance_factor": 7.7,
+      "notes": "Title 24 2022 Table 110.2-H"
+    },
+    {
+      "template": "DEER T24 2022",
+      "cooling_type": "AirCooled",
+      "heating_type": "HeatPump",
+      "subcategory": null,
+      "minimum_capacity": 65000,
+      "maximum_capacity": 134999,
+      "minimum_seasonal_energy_efficiency_ratio": null,
+      "minimum_energy_efficiency_ratio": 11,
+      "minimum_integrated_energy_efficiency_ratio": 14.6,
+      "minimum_heating_efficiency": 3.3,
+      "minimum_heating_seasonal_performance_factor": null,
+      "notes": "Title 24 2022 Table 110.2-H"
+    },
+    {
+      "template": "DEER T24 2022",
+      "cooling_type": "AirCooled",
+      "heating_type": "HeatPump",
+      "subcategory": null,
+      "minimum_capacity": 135000,
+      "maximum_capacity": 239999,
+      "minimum_seasonal_energy_efficiency_ratio": null,
+      "minimum_energy_efficiency_ratio": 10.6,
+      "minimum_integrated_energy_efficiency_ratio": null,
+      "minimum_heating_efficiency": 3.2,
+      "minimum_heating_seasonal_performance_factor": null,
+      "notes": "Title 24 2022 Table 110.2-H"
+    },
+    {
+      "template": "DEER T24 2022",
+      "cooling_type": "AirCooled",
+      "heating_type": "HeatPump",
+      "subcategory": null,
+      "minimum_capacity": 240000,
+      "maximum_capacity": 9999999,
+      "minimum_seasonal_energy_efficiency_ratio": null,
+      "minimum_energy_efficiency_ratio": 9.5,
+      "minimum_integrated_energy_efficiency_ratio": null,
+      "minimum_heating_efficiency": 3.2,
+      "minimum_heating_seasonal_performance_factor": null,
+      "notes": "Title 24 2022 Table 110.2-H"
+    }
+  ]
+}

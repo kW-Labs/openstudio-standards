@@ -61,22 +61,22 @@ class Standard
       'NECB-CNEB-7b' => epw_file.to_s,
       'NECB-CNEB-8' => epw_file.to_s,
       # For DEER
-      'CEC T24-CEC1' => 'ARCATA_725945_CZ2010.epw',
-      'CEC T24-CEC2' => 'SANTA-ROSA_724957_CZ2010.epw',
-      'CEC T24-CEC3' => 'OAKLAND_724930_CZ2010.epw',
-      'CEC T24-CEC4' => 'SAN-JOSE-REID_724946_CZ2010.epw',
-      'CEC T24-CEC5' => 'SANTA-MARIA_723940_CZ2010.epw',
-      'CEC T24-CEC6' => 'TORRANCE_722955_CZ2010.epw',
-      'CEC T24-CEC7' => 'SAN-DIEGO-LINDBERGH_722900_CZ2010.epw',
-      'CEC T24-CEC8' => 'FULLERTON_722976_CZ2010.epw',
-      'CEC T24-CEC9' => 'BURBANK-GLENDALE_722880_CZ2010.epw',
-      'CEC T24-CEC10' => 'RIVERSIDE_722869_CZ2010.epw',
-      'CEC T24-CEC11' => 'RED-BLUFF_725910_CZ2010.epw',
-      'CEC T24-CEC12' => 'SACRAMENTO-EXECUTIVE_724830_CZ2010.epw',
-      'CEC T24-CEC13' => 'FRESNO_723890_CZ2010.epw',
-      'CEC T24-CEC14' => 'PALMDALE_723820_CZ2010.epw',
-      'CEC T24-CEC15' => 'PALM-SPRINGS-INTL_722868_CZ2010.epw',
-      'CEC T24-CEC16' => 'BLUE-CANYON_725845_CZ2010.epw'
+      'CEC T24-CEC1' => 'CTZ01S22A.epw',
+      'CEC T24-CEC2' => 'CTZ02S22A.epw',
+      'CEC T24-CEC3' => 'CTZ03S22A.epw',
+      'CEC T24-CEC4' => 'CTZ04S22A.epw',
+      'CEC T24-CEC5' => 'CTZ05S22A.epw',
+      'CEC T24-CEC6' => 'CTZ06S22A.epw',
+      'CEC T24-CEC7' => 'CTZ07S22A.epw',
+      'CEC T24-CEC8' => 'CTZ08S22A.epw',
+      'CEC T24-CEC9' => 'CTZ09S22A.epw',
+      'CEC T24-CEC10' => 'CTZ10S22A.epw',
+      'CEC T24-CEC11' => 'CTZ11S22A.epw',
+      'CEC T24-CEC12' => 'CTZ12S22A.epw',
+      'CEC T24-CEC13' => 'CTZ13S22A.epw',
+      'CEC T24-CEC14' => 'CTZ14S22A.epw',
+      'CEC T24-CEC15' => 'CTZ15S22A.epw',
+      'CEC T24-CEC16' => 'CTZ16S22A.epw'
     }
     return climate_zone_weather_file_map
   end
