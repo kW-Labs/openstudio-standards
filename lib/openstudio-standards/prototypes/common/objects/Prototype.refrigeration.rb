@@ -476,8 +476,8 @@ class Standard
           'Hospital Kitchen',
           'EPr Kitchen',
           'ESe Kitchen',
-          'Gro RefWalkInCool',
-          'Gro RefWalkInFreeze',
+          # 'Gro RefWalkInCool',
+          # 'Gro RefWalkInFreeze',
           'RFF StockRoom',
           'RSD StockRoom',
           'Htl Kitchen',
@@ -486,6 +486,9 @@ class Standard
           walkin_zone = zone
           walkin_zone_area_m2 = zone.floorArea
         end
+      when 'Gro RefWalkInCool',
+          'Gro RefWalkInFreeze'
+          # these zones represent the walk-in zones themselves - get neighboring zones
       end
     end
 
