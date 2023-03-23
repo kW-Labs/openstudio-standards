@@ -486,9 +486,10 @@ class Standard
           walkin_zone = zone
           walkin_zone_area_m2 = zone.floorArea
         end
-      when 'Gro RefWalkInCool',
-          'Gro RefWalkInFreeze'
-          # these zones represent the walk-in zones themselves - get neighboring zones
+      # when 'Gro RefWalkInCool',
+      #     'Gro RefWalkInFreeze',
+      #     'Gro RefFoodPrep'
+      #     # these zones represent the walk-in zones themselves - get neighboring zones
       end
     end
 
@@ -540,6 +541,9 @@ class Standard
         floor_area_scaling_factor = floor_area_ft2 / 50_000
       end
       OpenStudio.logFree(OpenStudio::Info, 'openstudio.Model.Model', "Refrigeration size category is #{size_category}, with a scaling factor of #{floor_area_scaling_factor} because the floor area is #{floor_area_ft2.round} ft2.  All cases and walkins added later will subsequently be scaled by this factor.")
+    when 'EPr', 'ESe', 'RFF', 'RSD', 'Htl', 'Hsp'
+      size_category = "Any"
+      floor_area_scaling_factor = 1
     else
       size_category = 'Kitchen'
       floor_area_scaling_factor = 1 # Do not scale kitchen systems

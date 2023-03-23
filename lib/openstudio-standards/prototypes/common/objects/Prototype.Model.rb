@@ -94,7 +94,7 @@ Standard.class_eval do
     # create title 24 specific constructions for DEER prototypes
     if template.include? "DEER T24"
       model_create_t24_pv_storage_system(model, @instvarbuilding_type, climate_zone)
-      # model_add_typical_refrigeration(model, building_type)
+      model_add_typical_refrigeration(model, building_type)
     end
 
 
