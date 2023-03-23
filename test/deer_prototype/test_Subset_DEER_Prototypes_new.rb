@@ -4,30 +4,30 @@ require_relative '../helpers/create_deer_prototype_helper'
 class TestSubsetDEERPrototypes < CreateDEERPrototypeBuildingTest
   
   building_types = [
-      'Asm',
-      # 'ECC',
-      # 'EPr',
-      # 'ERC',
-      'ESe',
-      'EUn',
+      # 'Asm',
+      # # 'ECC',
+      # # 'EPr',
+      # # 'ERC',
+      # 'ESe',
+      # 'EUn',
       'Gro',
-      'Hsp',
-      # 'Nrs',
-      'Htl',
-      # 'Mtl',
-      # 'MBT',
-      # 'MLI',
-      'OfL',
-      'OfS',
-      'RFF',
-      'RSD',
-      # 'Rt3',
-      'RtL',
-      'RtS',
-      'SCn',
-      'SUn',
-      'WRf',
-      # 'MFm'
+      # 'Hsp',
+      # # 'Nrs',
+      # 'Htl',
+      # # 'Mtl',
+      # # 'MBT',
+      # # 'MLI',
+      # 'OfL',
+      # 'OfS',
+      # 'RFF',
+      # 'RSD',
+      # # 'Rt3',
+      # 'RtL',
+      # 'RtS',
+      # 'SCn',
+      # 'SUn',
+      # 'WRf',
+      # # 'MFm'
   ]
 
   # DEER HVAC type defaults by building type
@@ -46,7 +46,7 @@ class TestSubsetDEERPrototypes < CreateDEERPrototypeBuildingTest
       'Nrs' => ['DXGF'],
       'Htl' => [
         # 'SVVG',
-        'DXGF'
+        'DXGF',
       ],
       'Mtl' => ['DXHP'],
       'MBT' => ['DXGF'],
@@ -54,11 +54,13 @@ class TestSubsetDEERPrototypes < CreateDEERPrototypeBuildingTest
       'MLI' => ['DXGF'],
       'OfL' => [
         'SVVG',
-        'DXGF'
+        # 'SVVE',
+        'PVVG',
+        # 'DXGF'
       ],
       'OfS' => [
         'PVVG',
-        'DXGF'
+        # 'DXGF'
       ],
       'RFF' => ['DXGF'],
       'RSD' => ['DXGF'],
@@ -72,10 +74,10 @@ class TestSubsetDEERPrototypes < CreateDEERPrototypeBuildingTest
   
   templates = ['DEER T24 2022']
   climate_zones = [
-    # 'CEC T24-CEC5',
+    'CEC T24-CEC5',
     # 'CEC T24-CEC6',
     # 'CEC T24-CEC8',
-    'CEC T24-CEC9',
+    # 'CEC T24-CEC9',
     # 'CEC T24-CEC10',
     # 'CEC T24-CEC13',
     # 'CEC T24-CEC14',
@@ -84,7 +86,7 @@ class TestSubsetDEERPrototypes < CreateDEERPrototypeBuildingTest
   ]
 
   create_models = true
-  run_models = false
+  run_models = true
   compare_results = false
   
   debug = true
