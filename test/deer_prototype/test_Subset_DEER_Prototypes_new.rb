@@ -10,7 +10,7 @@ class TestSubsetDEERPrototypes < CreateDEERPrototypeBuildingTest
       # # 'ERC',
       # 'ESe',
       # 'EUn',
-      'Gro',
+      # 'Gro',
       # 'Hsp',
       # # 'Nrs',
       # 'Htl',
@@ -26,7 +26,7 @@ class TestSubsetDEERPrototypes < CreateDEERPrototypeBuildingTest
       # 'RtS',
       # 'SCn',
       # 'SUn',
-      # 'WRf',
+      'WRf',
       # # 'MFm'
   ]
 
